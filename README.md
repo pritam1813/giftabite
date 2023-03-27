@@ -29,4 +29,4 @@ To run the Food Donation Website, you need to follow these steps:
 * [Pritam Dhara](https://github.com/pritam1813)
 
 ## License
-This project is licensed under the [MIT License](https://choosealicense.com/licenses/mit/#).
+This project is licensed under the [MIT License](https://github.com/pritam1813/giftabite/blob/main/LICENSE).

@@ -3,6 +3,12 @@ const express = require('express');                     //Importing Express Modu
 const app = express();                                  //Creating the app
 
 
+app.use(express.static('assets'));                      //Mentioning Path for using the static assets by the app
+
+app.set('view engine', 'pug');                          // Setting default View Engine(required to render html)
+app.set('views', './views');                            // Setting views folder to render the pages by view engine
+
+
 //Setting the App to use the routes folder to handle Different Routes
 app.use('/', require('./routes/index'));
 
