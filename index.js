@@ -1,8 +1,10 @@
 const port = 3000;                                      //Port for Running the app
 const express = require('express');                     //Importing Express Module for creating APP
-const app = express();                         //Creating the app
+const app = express();                                  //Creating the app
 
 
+//Setting the App to use the routes folder to handle Different Routes
+app.use('/', require('./routes/index'));
 
 
 
