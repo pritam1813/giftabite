@@ -1,7 +1,17 @@
 const port = 3000;                                      //Port for Running the app
 const express = require('express');                     //Importing Express Module for creating APP
+const sassMiddleware = require('express-dart-sass');    //Middleware for compiling scss
 const app = express();                                  //Creating the app
 
+//Syntax for using express dart sass
+app.use(sassMiddleware({
+    /* Options */
+    src: 'assets/scss',
+    dest: 'assets/css',
+    debug: true,
+    outputStyle: 'expanded',
+    prefix:  '/css'  
+}));
 
 app.use(express.static('assets'));                      //Mentioning Path for using the static assets by the app
 

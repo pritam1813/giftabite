@@ -1,0 +1,37 @@
+@media screen and (max-width: 224px) {
+  header {
+    display: none;
+  }
+}
+/*  Media Query to control social icons column size   */
+@media screen and (max-width: 576px) {
+  #social-icons {
+    margin-top: 2%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    max-width: 180px;
+  }
+}
+@media screen and (min-width: 576px) {
+  #social-icons {
+    padding: 30px 30px 30px 40px;
+    height: 88px;
+  }
+}
+/* HEADER STYLE */
+header {
+  background-color: #77d7d3;
+}
+header a {
+  text-decoration: none;
+  color: #126360;
+}
+header a:hover {
+  color: #ff6d6d;
+}
+header .row {
+  color: #126360;
+}
+header #social-icons {
+  background-color: #4bc9c4;
+}
