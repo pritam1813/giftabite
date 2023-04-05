@@ -1,5 +1,5 @@
 //- Main Navbar
-nav.navbar.navbar-expand-md.navbar-light(role='banner')
+nav.navbar.navbar-expand-md.navbar-light#main-navbar(role='banner')
   .container
     //- Logo
     a.navbar-brand.mb-1(href='/')
@@ -11,10 +11,10 @@ nav.navbar.navbar-expand-md.navbar-light(role='banner')
         i.fa-solid.fa-bars
 
     //- Menu
-    #navbar-collapse.navbar-collapse.collapse
-        ul.navbar-nav.ms-auto.mb-2.mb-md-0
+    #navbar-collapse.navbar-collapse.collapse.justify-content-end
+        ul.navbar-nav.mb-2.me-2.mb-md-0
             li.nav-item
-                a.nav-link.active(href='/' aria-current='page') Home
+                a.nav-link(href='/') Home
             li.nav-item
                 a.nav-link(href='/about-us') About
             li.nav-item.dropdown

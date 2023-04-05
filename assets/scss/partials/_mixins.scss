@@ -1,0 +1,29 @@
+/* BUTTON DESIGNS */
+
+@mixin white-button($padding, $font-size, $font-weight){
+    border: none;
+    box-shadow: 0 0 0 0;
+    background-color: white;
+    color: $tertiary-color;
+    padding: $padding;
+    font-size: $font-size;
+    font-weight: $font-weight;
+    &:hover{
+        background-color: $tertiary-color;
+        color: white;
+    }
+}
+
+@mixin red-button($padding, $font-size, $font-weight, $btn-border){
+    border: $btn-border;
+    box-shadow: 0 0 0 0;
+    background-color: $secondary-color;
+    color: white;
+    padding: $padding;
+    font-size: $font-size;
+    font-weight: $font-weight;
+
+    &:hover{
+        background-color: $primary-color;
+    }
+}

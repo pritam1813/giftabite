@@ -1,5 +1,6 @@
 @import 'variables/colors';
 
+/*### NAVBAR STYLE ####*/
 //Controlling Navbar elements display on mobile and small tablets
 @media screen and (max-width: 576px) {
     nav {
@@ -28,9 +29,20 @@
             padding: 15px 18px;
         }
 
-        #navbar-collapse{
-            margin-left: 2rem;
-        }
+    }
+}
+
+@media screen and (max-width: 767px){
+    #navbar-collapse{
+        margin-top: -10px;
+        border-top: 1px solid $extra-nav-color;
+        padding-left: 2rem;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+        background-color: white;
     }
 }
 
@@ -39,6 +51,12 @@
     #nav-donate-button {
         margin-left: 57px;
 
+    }
+
+    .nav-item{
+        padding: 0px 1.5rem 0px 1.5rem;
+        border-right: 1px solid $nav-color1;
+        font-weight: 500;
     }
 }
 
@@ -58,7 +76,13 @@
 
 /*Nav elements main design */
 
+#main-navbar{
+    padding-top: 29px;
+    padding-bottom: 35px;
+}
+
 nav {
+
     //Logo Dimensions
     .navbar-brand {
         img {
@@ -97,6 +121,12 @@ nav {
         i {
             height: 24px;
             width: 24px;
+        }
+    }
+
+    .navbar-nav {
+        .nav-link.active {
+            color: $secondary-color;
         }
     }
 }

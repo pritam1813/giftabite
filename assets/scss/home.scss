@@ -1,0 +1,291 @@
+@import 'variables/colors';
+@import 'partials/mixins';
+
+/*### HOMEPAGE STYLE ####*/
+
+/* Media Queries */
+
+//Mobile devices and below
+@media (max-width: 576px) {
+    #banner-container{
+        height: 500px;
+        #banner-title-wrap{
+            #banner-heading{
+                font-size: 35px;
+            }
+        }
+    }
+
+    #banner-buttons{
+        #banner-donate-button{
+            @include red-button(15px 30px, 16px, 500, none);
+        }
+
+        #banner-discover-button {
+            @include white-button(15px 30px, 16px, 500);
+            margin-left: 2%;
+        }
+    }
+}
+
+//Mobile devices and above
+@media (min-width: 577px){
+
+    #banner-buttons{
+        #banner-donate-button{
+            @include red-button(20px 30px, 18px, 500, none);
+        }
+
+        #banner-discover-button {
+            @include white-button(20px 30px, 18px, 500);
+            margin-left: 4%;
+        }
+    }
+}
+
+// Above small but below medium screens
+@media (min-width: 577px) and (max-width: 768px){
+    #banner-container{
+        height: 600px;
+        #banner-title-wrap{
+            #banner-heading{
+                font-size: 38px;
+            }
+        }
+    }
+}
+
+//Tablet screens and below
+@media (max-width: 768px) {
+
+    #banner-title-wrap{
+        p{
+            font-weight: 400;
+            font-size: 36px;
+        }
+    }
+
+    #about-us-intro{
+        .container{
+            max-width: 90%;
+        }
+    }
+}
+
+//Above medium but below large screens
+@media (min-width: 769px) and (max-width: 991px){
+    #banner-container{
+        height: 750px;
+        #banner-title-wrap{
+
+            #banner-heading{
+                font-size: 50px;
+            }
+
+            p{
+                font-weight: 400;
+                font-size: 40px;
+            }
+        }
+    }
+}
+
+// Below Large screens
+@media (max-width: 991px){
+    #about-us-intro .container .row .col-lg-4 {
+        #intro-btn-1 {
+            @include white-button(15px 30px, 16px, 500);
+        }
+        p{
+            margin-bottom: 2%;
+        }
+    }
+}
+
+//Large screens and above
+@media (min-width: 992px){
+    #banner-container{
+        height: 950px;
+        #banner-title-wrap{
+            p{
+                font-weight: 400;
+                font-size: 50px;
+            }
+        }
+    }
+
+    #about-us-intro .container .row .col-lg-4 {
+        #intro-btn-1{
+            @include white-button(20px 40px, 18px, 500);
+        }
+    }
+}
+
+//Above Large and Below HD
+@media (min-width: 992px) and (max-width: 1279px){
+    #banner-title-wrap{
+        #banner-heading{
+            font-size: 70px;
+        }
+    }
+}
+
+//HD Screens and above
+@media (min-width: 1280px){
+    #banner-title-wrap{
+        #banner-heading{
+            font-size: 90px;
+        }
+    }
+}
+
+//Custom-size
+@media (min-width: 769px) {
+    #about-us-intro{
+        .container{
+            margin-top: -5%;
+        }
+    }
+
+}
+
+
+/* TOP BANNER DESIGN*/
+#main-Banner {
+
+    #banner-container{
+        width: 100%;
+        background: url('../images/banner.jpg') center/cover no-repeat;
+        #banner-title-wrap{
+            padding: 1%;
+            background-color: rgba(46, 64, 73, 0.6);
+            color: white;
+            line-height: 1;
+
+            #banner-subtitle{
+                font-family: 'Sue Ellen Francisco', sans-serif;
+                text-transform: capitalize;
+            }
+
+            #banner-heading{
+                width: auto;
+                font-family: 'Shippori Mincho', sans-serif;
+                font-weight: 800;
+            }
+
+            #banner-shape {
+                margin-top: 4%;
+                #circle-shape{
+                    padding: 0;
+                    margin: 0;
+                    width: 24px;
+                    height: 24px;
+                    background-color: white;
+                }
+                #shape-line{
+                    height: 0px;
+                }
+
+                #shape-text {
+                    padding: 2px;
+                    font-family: 'Work Sans', sans-serif;
+                    color: #fff;
+                    font-size: 18px;
+                    line-height: 1.5;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                }
+            }
+
+            #banner-buttons{
+                margin-top: 6%;
+            }
+        }
+    }
+}
+
+/* ABOUT US INTRO SECTION */
+#about-us-intro {
+    .container {
+        
+        .row {
+            .col-lg-4 {
+                padding: 50px 30px 60px 46px;
+
+                h2{
+                    font-family: 'Shippori Mincho', sans-serif;
+                    line-height: 1.3;
+                    font-weight: 800;
+                }
+
+                p{
+                    padding-top: 10px;
+                    font-family: 'Work Sans', sans-serif;
+                    font-size: 20px;
+                    line-height: 1.5;
+                    font-weight: 400;
+                }
+                .btn{
+                    border-radius: 34px;
+                    text-transform: uppercase;
+                }
+                
+                #join-link{
+                    color: white;
+                }
+
+            }
+
+
+            #col1 {
+                background-color: $primary-color;
+                color: $tertiary-color;
+            }
+
+            #col2 {
+                background-color: $tertiary-color;
+                color: white;
+            }
+
+            #col3 {
+                padding: 0%;
+                position: relative;
+                background: url('../images/backgroundimage1.jpg') center/cover no-repeat;
+                min-height: 200px;
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(255, 109, 109, 0.67);
+                }
+
+                .fa-circle{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    border: none;
+                    color: white;
+                    font-size: 80px;
+                    &:hover{
+                        color: $primary-color;
+                    }
+                }
+
+                .fa-play{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    border: none;
+                    color: $tertiary-color;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}

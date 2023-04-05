@@ -1,0 +1,265 @@
+/* MAIN COLORS */
+/* HEADER COLORS */
+/*Navbar Colors*/
+/* BUTTON DESIGNS */
+/*### HOMEPAGE STYLE ####*/
+/* Media Queries */
+@media (max-width: 576px) {
+  #banner-container {
+    height: 500px;
+  }
+  #banner-container #banner-title-wrap #banner-heading {
+    font-size: 35px;
+  }
+  #banner-buttons #banner-donate-button {
+    border: none;
+    box-shadow: 0 0 0 0;
+    background-color: #ff6d6d;
+    color: white;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  #banner-buttons #banner-donate-button:hover {
+    background-color: #77d7d3;
+  }
+  #banner-buttons #banner-discover-button {
+    border: none;
+    box-shadow: 0 0 0 0;
+    background-color: white;
+    color: #2e4049;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: 500;
+    margin-left: 2%;
+  }
+  #banner-buttons #banner-discover-button:hover {
+    background-color: #2e4049;
+    color: white;
+  }
+}
+@media (min-width: 577px) {
+  #banner-buttons #banner-donate-button {
+    border: none;
+    box-shadow: 0 0 0 0;
+    background-color: #ff6d6d;
+    color: white;
+    padding: 20px 30px;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  #banner-buttons #banner-donate-button:hover {
+    background-color: #77d7d3;
+  }
+  #banner-buttons #banner-discover-button {
+    border: none;
+    box-shadow: 0 0 0 0;
+    background-color: white;
+    color: #2e4049;
+    padding: 20px 30px;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 4%;
+  }
+  #banner-buttons #banner-discover-button:hover {
+    background-color: #2e4049;
+    color: white;
+  }
+}
+@media (min-width: 577px) and (max-width: 768px) {
+  #banner-container {
+    height: 600px;
+  }
+  #banner-container #banner-title-wrap #banner-heading {
+    font-size: 38px;
+  }
+}
+@media (max-width: 768px) {
+  #banner-title-wrap p {
+    font-weight: 400;
+    font-size: 36px;
+  }
+  #about-us-intro .container {
+    max-width: 90%;
+  }
+}
+@media (min-width: 769px) and (max-width: 991px) {
+  #banner-container {
+    height: 750px;
+  }
+  #banner-container #banner-title-wrap #banner-heading {
+    font-size: 50px;
+  }
+  #banner-container #banner-title-wrap p {
+    font-weight: 400;
+    font-size: 40px;
+  }
+}
+@media (max-width: 991px) {
+  #about-us-intro .container .row .col-lg-4 #intro-btn-1 {
+    border: none;
+    box-shadow: 0 0 0 0;
+    background-color: white;
+    color: #2e4049;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  #about-us-intro .container .row .col-lg-4 #intro-btn-1:hover {
+    background-color: #2e4049;
+    color: white;
+  }
+  #about-us-intro .container .row .col-lg-4 p {
+    margin-bottom: 2%;
+  }
+}
+@media (min-width: 992px) {
+  #banner-container {
+    height: 950px;
+  }
+  #banner-container #banner-title-wrap p {
+    font-weight: 400;
+    font-size: 50px;
+  }
+  #about-us-intro .container .row .col-lg-4 #intro-btn-1 {
+    border: none;
+    box-shadow: 0 0 0 0;
+    background-color: white;
+    color: #2e4049;
+    padding: 20px 40px;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  #about-us-intro .container .row .col-lg-4 #intro-btn-1:hover {
+    background-color: #2e4049;
+    color: white;
+  }
+}
+@media (min-width: 992px) and (max-width: 1279px) {
+  #banner-title-wrap #banner-heading {
+    font-size: 70px;
+  }
+}
+@media (min-width: 1280px) {
+  #banner-title-wrap #banner-heading {
+    font-size: 90px;
+  }
+}
+@media (min-width: 769px) {
+  #about-us-intro .container {
+    margin-top: -5%;
+  }
+}
+/* TOP BANNER DESIGN*/
+#main-Banner #banner-container {
+  width: 100%;
+  background: url("../images/banner.jpg") center/cover no-repeat;
+}
+#main-Banner #banner-container #banner-title-wrap {
+  padding: 1%;
+  background-color: rgba(46, 64, 73, 0.6);
+  color: white;
+  line-height: 1;
+}
+#main-Banner #banner-container #banner-title-wrap #banner-subtitle {
+  font-family: "Sue Ellen Francisco", sans-serif;
+  text-transform: capitalize;
+}
+#main-Banner #banner-container #banner-title-wrap #banner-heading {
+  width: auto;
+  font-family: "Shippori Mincho", sans-serif;
+  font-weight: 800;
+}
+#main-Banner #banner-container #banner-title-wrap #banner-shape {
+  margin-top: 4%;
+}
+#main-Banner #banner-container #banner-title-wrap #banner-shape #circle-shape {
+  padding: 0;
+  margin: 0;
+  width: 24px;
+  height: 24px;
+  background-color: white;
+}
+#main-Banner #banner-container #banner-title-wrap #banner-shape #shape-line {
+  height: 0px;
+}
+#main-Banner #banner-container #banner-title-wrap #banner-shape #shape-text {
+  padding: 2px;
+  font-family: "Work Sans", sans-serif;
+  color: #fff;
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+#main-Banner #banner-container #banner-title-wrap #banner-buttons {
+  margin-top: 6%;
+}
+
+/* ABOUT US INTRO SECTION */
+#about-us-intro .container .row .col-lg-4 {
+  padding: 50px 30px 60px 46px;
+}
+#about-us-intro .container .row .col-lg-4 h2 {
+  font-family: "Shippori Mincho", sans-serif;
+  line-height: 1.3;
+  font-weight: 800;
+}
+#about-us-intro .container .row .col-lg-4 p {
+  padding-top: 10px;
+  font-family: "Work Sans", sans-serif;
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+#about-us-intro .container .row .col-lg-4 .btn {
+  border-radius: 34px;
+  text-transform: uppercase;
+}
+#about-us-intro .container .row .col-lg-4 #join-link {
+  color: white;
+}
+#about-us-intro .container .row #col1 {
+  background-color: #77d7d3;
+  color: #2e4049;
+}
+#about-us-intro .container .row #col2 {
+  background-color: #2e4049;
+  color: white;
+}
+#about-us-intro .container .row #col3 {
+  padding: 0%;
+  position: relative;
+  background: url("../images/backgroundimage1.jpg") center/cover no-repeat;
+  min-height: 200px;
+}
+#about-us-intro .container .row #col3:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 109, 109, 0.67);
+}
+#about-us-intro .container .row #col3 .fa-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  color: white;
+  font-size: 80px;
+}
+#about-us-intro .container .row #col3 .fa-circle:hover {
+  color: #77d7d3;
+}
+#about-us-intro .container .row #col3 .fa-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  color: #2e4049;
+  font-size: 20px;
+}

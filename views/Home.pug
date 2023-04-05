@@ -1,4 +1,49 @@
 extends layout.pug
+//- Stylesheet and fonts for homepage
+append css
+    link(rel="stylesheet" href="css/home.css")
+    link(href="https://fonts.googleapis.com/css2?family=Shippori+Mincho&family=Sue+Ellen+Francisco&display=swap" rel="stylesheet")  
 
 block content
-    div.container the page
+    //- BANNER
+    section#main-Banner
+        .d-flex#banner-container
+            .container.d-flex.align-items-center#banner-flex
+                #banner-title-wrap.rounded
+                    p#banner-subtitle  Need Help...
+                    #banner-heading Being Life Saver <br/> For Someone
+                    .d-flex.text-center.align-items-center#banner-shape
+                        .col-sm-1.border.border-white.rounded-circle.d-none.d-lg-block#circle-shape
+                        .col-sm-5.border.border-white.border-2.d-none.d-lg-block#shape-line
+                        .col-sm-9.col-md-8.col-lg-5.border.border-white.border-2.rounded-pill#shape-text BELOW POVERTY LINE
+
+                    .text-start#banner-buttons
+                        a.btn.btn-primary.red-button.rounded-pill#banner-donate-button(href='/causes') DONATE
+                        a.btn.btn-primary.white-button.rounded-pill#banner-discover-button(href='/causes') DISCOVER
+
+    //-ABOUT US INTRO
+    section#about-us-intro 
+        .container 
+            .row.text-center.text-md-start
+                .col-lg-4.col-md-12#col1
+                    h2 Register as a Contributor
+                    p Donating to provide healthy food for children is an important way to support their health and well-being. 
+                    a.btn.btn-primary#intro-btn-1(href='/causes') Discover
+                .col-lg-4.col-md-12#col2 
+                    h2 Become a Volunteer
+                    p Improve the lives of children by providing them with access to the resources they need to thrive.  
+                    a#join-link(href='/causes') Join Us
+                .col-lg-4.col-md-12#col3
+                    
+                    i.fa-solid.fa-circle.btn.btn-default(data-bs-toggle="modal" data-bs-target="#youtubeVideoModal")
+                        i.fa-solid.fa-play
+        
+        //- Modal
+        #youtubeVideoModal.modal.fade(tabindex='-1' aria-labelledby='youtubeVideoModalLabel' aria-hidden='true')
+            .modal-dialog.modal-dialog-centered.modal-md
+                .modal-content
+                    .modal-header
+                        h1.modal-title.fs-5 September Event
+                        button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+                    .modal-body(style="min-height: 315px; min-width: 500px;")
+                        iframe(width='100%' height='315' src='https://www.youtube-nocookie.com/embed/Y-CTVrUj1DY' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' allowfullscreen='')
