@@ -47,3 +47,33 @@ block content
                         button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
                     .modal-body(style="min-height: 315px; min-width: 500px;")
                         iframe(width='100%' height='315' src='https://www.youtube-nocookie.com/embed/Y-CTVrUj1DY' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' allowfullscreen='')
+
+    //- ABOUT US
+    section#about-us
+        .container#about-us-container
+            .row.text-center.text-md-start
+                .col-lg-6.col-sm-12.mt-4#about-us-content 
+                    .col#about-section-title-wrap
+                        p about us
+                        h2 Help People,<br/> Our Main Goals
+                    .col#about-section-content-wrap
+                        p Giftabite manages food donation programs for food service companies and Individuals interested in donating food. The donating process is based on donors receiving economic benefit through tax savings in addition to involvement with community and corporate goodwill.
+                          <br/> <br/> Our team members have experience with major restaurant chains and retailers in operations and food quality.
+                    .col
+                        a.btn.btn-primary.rounded-pill.mt-4#more-about-btn(href='/about-us') More About
+                .col-lg-6.col-sm-12.mt-4#donation-content
+                    .d-flex.justify-content-center#donation-list-content
+                        ul#about-us-list
+                            each item in ['Food Donation', 'Fund Raise', 'Water Supply']
+                                li
+                                 i.me-2.fa-solid.fa-circle-check.fa-lg(style='color: #77d7d3;')
+                                 | #{item}
+                    #total-donation-wrap.mt-4 
+                        #total-donation-wrap-heading.mb-4
+                            h2 Total Donation
+                        .col#total-donation-wrap-progress.mb-4
+                            .progress(role='progressbar' aria-label='total donation progress bar' aria-valuenow='75' aria-valuemin='0' aria-valuemax='100' style='height: 7px')
+                                .progress-bar(style='width: 75%')
+                        h3#total-donation.mb-4 Collection - ₹ 5.2 Lakhs
+                    .col
+                        a.btn.btn-primary.rounded-pill.mt-4#donate-now-btn(href='/about-us') Donate Now

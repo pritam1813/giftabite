@@ -53,6 +53,16 @@
             }
         }
     }
+
+
+    #about-section-title-wrap{
+        p{
+            @include sub-title(30px);
+        }
+        h2{
+            @include sub-heading(34px);
+        }
+    }
 }
 
 //Tablet screens and below
@@ -69,6 +79,42 @@
         .container{
             max-width: 90%;
         }
+    }
+
+
+    #about-section-title-wrap{
+        p{
+            @include sub-title(25px);
+        }
+        h2{
+            @include sub-heading(28px);
+        }
+    }
+
+
+    #about-section-content-wrap{
+        p {
+            font-size: 18px;
+          }
+    }
+}
+
+//Above Tablet screens
+@media (min-width: 768px){
+    
+    #about-section-title-wrap{
+        p{
+            @include sub-title(35px);
+        }
+        h2{
+            @include sub-heading(40px);
+        }
+    }
+
+    #about-section-content-wrap{
+        p {
+            font-size: 20px;
+          }
     }
 }
 
@@ -285,6 +331,80 @@
                     color: $tertiary-color;
                     font-size: 20px;
                 }
+            }
+        }
+    }
+}
+
+/* ABOUT US SECTION */
+#about-us-container{
+    padding: 4% 0%;
+
+    #about-us-content{
+        #about-section-title-wrap{
+            p{
+                color: $secondary-color;
+            }
+            h2{
+                color: $tertiary-color;
+            }
+        }
+
+        #about-section-content-wrap{
+            p {
+                margin-bottom: 10px;
+                padding-top: 10px;
+                font-family: 'Work Sans', sans-serif;
+                color: $home-color2;
+                line-height: 1.5;
+                font-weight: 400;
+              }
+        }
+        #more-about-btn{
+            @include red-button(20px 40px, 18px, 500)
+        }
+    }
+
+    #donation-content{
+        padding: 60px 40px 46px;
+        background-color: $home-color1;
+        #donate-now-btn{
+            @include white-button(20px 40px, 18px, 500, $primary-color)
+        }
+
+        #about-us-list {
+            list-style: none;
+            padding-left: 0;
+            font-weight: 500;
+            color: $home-color2;
+            font-family: 'Work Sans', sans-serif;
+            font-size: 20px;
+            line-height: 1.5;
+            li{
+                margin-bottom: 10px;
+                padding-top: 10px;
+            }
+        }
+
+        #total-donation-wrap {
+            #total-donation-wrap-heading{
+                @include sub-heading(30px);
+                h2{
+                    font-weight: 800;
+                }
+            }
+
+            #total-donation-wrap-progress{
+                .progress{
+                    background-color: $home-color3;
+                    .progress-bar{
+                        background-color: $secondary-color;
+                    }
+                }
+            }
+            h3{
+                font-family: 'Shippori Mincho', sans-serif;
+                font-weight: 500;
             }
         }
     }
