@@ -1,234 +1,111 @@
 @import 'variables/colors';
 @import 'partials/mixins';
+@import 'mixins/hompage-mixins';
 
 /*### HOMEPAGE STYLE ####*/
 
 /* Media Queries */
 
-//Mobile devices and below
-@media (max-width: 576px) {
-    #banner-container{
-        height: 500px;
-        #banner-title-wrap{
-            #banner-heading{
-                font-size: 35px;
-            }
-        }
-    }
-
-    #banner-buttons{
-        #banner-donate-button{
-            @include red-button(15px 30px, 16px, 500, none);
-        }
-
-        #banner-discover-button {
-            @include white-button(15px 30px, 16px, 500);
-            margin-left: 2%;
-        }
-    }
-}
-
-//Mobile devices and above
-@media (min-width: 577px){
-
-    #banner-buttons{
-        #banner-donate-button{
-            @include red-button(20px 30px, 18px, 500, none);
-        }
-
-        #banner-discover-button {
-            @include white-button(20px 30px, 18px, 500);
-            margin-left: 4%;
-        }
-    }
-}
-
-// Above small but below medium screens
-@media (min-width: 577px) and (max-width: 768px){
-    #banner-container{
-        height: 600px;
-        #banner-title-wrap{
-            #banner-heading{
-                font-size: 38px;
-            }
-        }
-    }
-
-
-    #about-section-title-wrap{
-        p{
-            @include sub-title(30px);
-        }
-        h2{
-            @include sub-heading(34px);
-        }
-    }
-}
-
-//Tablet screens and below
-@media (max-width: 768px) {
-
-    #banner-title-wrap{
-        p{
-            font-weight: 400;
-            font-size: 36px;
-        }
-    }
-
-    #about-us-intro{
-        .container{
-            max-width: 90%;
-        }
-    }
-
-
-    #about-section-title-wrap{
-        p{
-            @include sub-title(25px);
-        }
-        h2{
-            @include sub-heading(28px);
-        }
-    }
-
-
-    #about-section-content-wrap{
-        p {
-            font-size: 18px;
-          }
-    }
-}
-
 //Above Tablet screens
-@media (min-width: 768px){
-    
-    #about-section-title-wrap{
-        p{
-            @include sub-title(35px);
-        }
-        h2{
-            @include sub-heading(40px);
-        }
-    }
-
-    #about-section-content-wrap{
-        p {
-            font-size: 20px;
-          }
-    }
-}
-
-//Above medium but below large screens
-@media (min-width: 769px) and (max-width: 991px){
-    #banner-container{
-        height: 750px;
-        #banner-title-wrap{
-
-            #banner-heading{
-                font-size: 50px;
-            }
-
-            p{
-                font-weight: 400;
-                font-size: 40px;
-            }
-        }
-    }
-}
-
-// Below Large screens
-@media (max-width: 991px){
-    #about-us-intro .container .row .col-lg-4 {
-        #intro-btn-1 {
-            @include white-button(15px 30px, 16px, 500);
-        }
-        p{
-            margin-bottom: 2%;
-        }
-    }
-}
-
-//Large screens and above
-@media (min-width: 992px){
-    #banner-container{
-        height: 950px;
-        #banner-title-wrap{
-            p{
-                font-weight: 400;
-                font-size: 50px;
-            }
-        }
-    }
-
-    #about-us-intro .container .row .col-lg-4 {
-        #intro-btn-1{
-            @include white-button(20px 40px, 18px, 500);
-        }
-    }
-}
-
-//Above Large and Below HD
-@media (min-width: 992px) and (max-width: 1279px){
-    #banner-title-wrap{
-        #banner-heading{
-            font-size: 70px;
-        }
-    }
-}
-
-//HD Screens and above
-@media (min-width: 1280px){
-    #banner-title-wrap{
-        #banner-heading{
-            font-size: 90px;
-        }
-    }
-}
-
-//Custom-size
 @media (min-width: 769px) {
-    #about-us-intro{
-        .container{
+    #about-us-intro {
+        .container {
             margin-top: -5%;
         }
     }
-
 }
 
+/*## CUSTOM CLASSES ##*/
+
+//Fonts
+.red-font{
+    color: $secondary-color;
+}
+
+.dark-font{
+    color: $tertiary-color;
+}
+
+.grey-font{
+    color: $home-color2;
+}
+
+.sub-title-font {
+    @include responsive-fontsize-gen(25px, 25px, 30px, 35px);
+    font-family: 'Sue Ellen Francisco', sans-serif;
+    text-transform: capitalize;
+}
+
+.sub-heading-font {
+    font-family: 'Shippori Mincho', sans-serif;
+    text-transform: capitalize;
+    @include responsive-fontsize-gen(28px, 28px, 34px, 40px);
+    line-height: 1.3;
+    font-weight: 800;
+}
+
+.para-font-style {
+    line-height: 1.3;
+    text-transform: capitalize;
+    @include responsive-fontsize-gen(17px, 18px, 19px, 20px);
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+}
+
+//Buttons
+.red-btn-lg {
+    @include responsive-red-button(15px 30px, 20px 40px, 16px, 18px, 0%, 0%, mobile);
+}
+
+.white-btn-lg{
+    @include responsive-white-button(15px 30px, 20px 40px, 16px, 18px, 0%, 0%, mobile);
+    &:hover{
+        background-color: $primary-color;
+    }
+}
 
 /* TOP BANNER DESIGN*/
 #main-Banner {
 
-    #banner-container{
+    #banner-container {
         width: 100%;
         background: url('../images/banner.jpg') center/cover no-repeat;
-        #banner-title-wrap{
+
+        //Responsive Height
+        @include responsive-height-gen(500px, 600px, 750px, 950px);
+
+        #banner-title-wrap {
             padding: 1%;
             background-color: rgba(46, 64, 73, 0.6);
             color: white;
             line-height: 1;
 
-            #banner-subtitle{
-                font-family: 'Sue Ellen Francisco', sans-serif;
-                text-transform: capitalize;
+            p {
+                font-weight: 400;
+                @include responsive-fontsize-gen(36px, 36px, 40px, 50px);
             }
 
-            #banner-heading{
+            #banner-heading {
                 width: auto;
+                //Responsive font size
+                @include resposive-fontsize-ext(35px, 38px, 50px, 70px, 90px);
+
                 font-family: 'Shippori Mincho', sans-serif;
                 font-weight: 800;
             }
 
             #banner-shape {
                 margin-top: 4%;
-                #circle-shape{
+
+                #circle-shape {
                     padding: 0;
                     margin: 0;
                     width: 24px;
                     height: 24px;
                     background-color: white;
                 }
-                #shape-line{
+
+                #shape-line {
                     height: 0px;
                 }
 
@@ -243,7 +120,15 @@
                 }
             }
 
-            #banner-buttons{
+            #banner-buttons {
+                #banner-donate-button {
+                    @include responsive-red-button(15px 30px, 20px 30px, 16px, 18px, 0, 0, mobile);
+                }
+
+                #banner-discover-button {
+                    @include responsive-white-button(15px 30px, 20px 30px, 16px, 18px, 2%, 4%, mobile);
+                }
+
                 margin-top: 6%;
             }
         }
@@ -253,30 +138,31 @@
 /* ABOUT US INTRO SECTION */
 #about-us-intro {
     .container {
-        
+        @include responsive-width(90%, 90%, 100%, 100%);
+
         .row {
             .col-lg-4 {
                 padding: 50px 30px 60px 46px;
 
-                h2{
+                h2 {
                     font-family: 'Shippori Mincho', sans-serif;
                     line-height: 1.3;
                     font-weight: 800;
                 }
 
-                p{
+                p {
                     padding-top: 10px;
                     font-family: 'Work Sans', sans-serif;
                     font-size: 20px;
                     line-height: 1.5;
                     font-weight: 400;
                 }
-                .btn{
-                    border-radius: 34px;
-                    text-transform: uppercase;
+
+                #intro-btn-1 {
+                    @include responsive-white-button(15px 30px, 20px 40px, 16px, 18px, 0%, 0%, desktop);
                 }
-                
-                #join-link{
+
+                #join-link {
                     color: white;
                 }
 
@@ -309,7 +195,7 @@
                     background-color: rgba(255, 109, 109, 0.67);
                 }
 
-                .fa-circle{
+                .fa-circle {
                     position: absolute;
                     top: 50%;
                     left: 50%;
@@ -317,12 +203,13 @@
                     border: none;
                     color: white;
                     font-size: 80px;
-                    &:hover{
+
+                    &:hover {
                         color: $primary-color;
                     }
                 }
 
-                .fa-play{
+                .fa-play {
                     position: absolute;
                     top: 50%;
                     left: 50%;
@@ -337,39 +224,39 @@
 }
 
 /* ABOUT US SECTION */
-#about-us-container{
+#about-us-container {
     padding: 4% 0%;
 
-    #about-us-content{
-        #about-section-title-wrap{
-            p{
+    #about-us-content {
+        #about-section-title-wrap {
+            p {
                 color: $secondary-color;
             }
-            h2{
+
+            h2 {
                 color: $tertiary-color;
             }
         }
 
-        #about-section-content-wrap{
+        #about-section-content-wrap {
             p {
                 margin-bottom: 10px;
                 padding-top: 10px;
                 font-family: 'Work Sans', sans-serif;
                 color: $home-color2;
                 line-height: 1.5;
+                @include responsive-fontsize-gen(18px, 18px, 20px, 20px);
                 font-weight: 400;
-              }
-        }
-        #more-about-btn{
-            @include red-button(20px 40px, 18px, 500)
+            }
         }
     }
 
-    #donation-content{
+    #donation-content {
         padding: 60px 40px 46px;
         background-color: $home-color1;
-        #donate-now-btn{
-            @include white-button(20px 40px, 18px, 500, $primary-color)
+
+        #donate-now-btn {
+            @include white-button(20px 40px, 18px, $primary-color)
         }
 
         #about-us-list {
@@ -380,32 +267,93 @@
             font-family: 'Work Sans', sans-serif;
             font-size: 20px;
             line-height: 1.5;
-            li{
+
+            li {
                 margin-bottom: 10px;
                 padding-top: 10px;
             }
         }
 
         #total-donation-wrap {
-            #total-donation-wrap-heading{
+            #total-donation-wrap-heading {
                 @include sub-heading(30px);
-                h2{
+
+                h2 {
                     font-weight: 800;
                 }
             }
 
-            #total-donation-wrap-progress{
-                .progress{
+            #total-donation-wrap-progress {
+                .progress {
                     background-color: $home-color3;
-                    .progress-bar{
+
+                    .progress-bar {
                         background-color: $secondary-color;
                     }
                 }
             }
-            h3{
+
+            h3 {
                 font-family: 'Shippori Mincho', sans-serif;
                 font-weight: 500;
             }
         }
     }
+}
+
+/*BECOME VOLUNTEER SECTION */
+#become-volunteer-section {
+    background: url('../images/backgroundimage1.jpg') center/cover no-repeat;
+    position: relative;
+    @include responsive-padding-gen(80px 0px, 80px 0px, 100px 0px, 140px 0px);
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(46, 64, 73, 0.96);
+
+    }
+
+    .container {
+        position: relative;
+        color: white;
+
+        #vounteer-form-wrap {
+            border: 1px solid white;
+            @include responsive-padding-ext(40px 20px 25px, 50px 20px 25px, 50px 20px 25px, 50px 35px 30px, 60px 65px 40px);
+
+            form {
+                input {
+                    width: 100%;
+                    height: 65px;
+                    padding: 8px 12px 8px 23px;
+                    margin-bottom: 30px;
+                    border: 1px solid white;
+                    font-size: 18px;
+                    font-weight: 400;
+                    color: white;
+                    line-height: 1.42857143;
+                    background-color: transparent;
+                    font-family: 'Work Sans', sans-serif;
+                    &::placeholder{
+                        color: #fff;
+                    }
+                    &:focus{
+                        border: none;
+                        outline: none;
+                        box-shadow: 0 0 0 1px $primary-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*OTHER DONATIONS*/
+#other-donations{
+    padding: 4% 0%;
 }

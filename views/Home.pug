@@ -10,7 +10,7 @@ block content
         .d-flex#banner-container
             .container.d-flex.align-items-center#banner-flex
                 #banner-title-wrap.rounded
-                    p#banner-subtitle  Need Help...
+                    p.sub-title-font  Need Help...
                     #banner-heading Being Life Saver <br/> For Someone
                     .d-flex.text-center.align-items-center#banner-shape
                         .col-sm-1.border.border-white.rounded-circle.d-none.d-lg-block#circle-shape
@@ -28,7 +28,7 @@ block content
                 .col-lg-4.col-md-12#col1
                     h2 Register as a Contributor
                     p Donating to provide healthy food for children is an important way to support their health and well-being. 
-                    a.btn.btn-primary#intro-btn-1(href='/causes') Discover
+                    a.btn.rounded-pill#intro-btn-1(href='/causes') Discover
                 .col-lg-4.col-md-12#col2 
                     h2 Become a Volunteer
                     p Improve the lives of children by providing them with access to the resources they need to thrive.  
@@ -54,13 +54,13 @@ block content
             .row.text-center.text-md-start
                 .col-lg-6.col-sm-12.mt-4#about-us-content 
                     .col#about-section-title-wrap
-                        p about us
-                        h2 Help People,<br/> Our Main Goals
+                        p.sub-title-font about us
+                        h2.sub-heading-font Help People,<br/> Our Main Goals
                     .col#about-section-content-wrap
                         p Giftabite manages food donation programs for food service companies and Individuals interested in donating food. The donating process is based on donors receiving economic benefit through tax savings in addition to involvement with community and corporate goodwill.
                           <br/> <br/> Our team members have experience with major restaurant chains and retailers in operations and food quality.
                     .col
-                        a.btn.btn-primary.rounded-pill.mt-4#more-about-btn(href='/about-us') More About
+                        a.btn.red-btn-lg.rounded-pill.mt-4#more-about-btn(href='/about-us') More About
                 .col-lg-6.col-sm-12.mt-4#donation-content
                     .d-flex.justify-content-center#donation-list-content
                         ul#about-us-list
@@ -77,3 +77,64 @@ block content
                         h3#total-donation.mb-4 Collection - ₹ 5.2 Lakhs
                     .col
                         a.btn.btn-primary.rounded-pill.mt-4#donate-now-btn(href='/about-us') Donate Now
+
+    //- BECOME VOLUNTEER
+    section#become-volunteer-section 
+        .container 
+            .row.text-center.text-md-start
+                .col-sm-12.col-lg-6#Become-volunteer-wrap 
+                    .col.mb-3#become-volunteer-title-wrap 
+                        p.sub-title-font how we help
+                        h2.sub-heading-font Join With Humanity To Give <br/> Education For Poor <br/> Children
+                    .col.mb-4#become-volunteer-content-wrap 
+                        p.para-font-style We work toward this mission by supporting large-scale systemic interventions as well as providing essential food support to underserved communities in the form of raw grains and freshly cooked food.
+                    .col
+                        img.img-fluid(src="images/Image2.png", alt="volunteer content section Mini image")
+                    .col#become-volunteer-button
+                        a.btn.red-btn-lg.rounded-pill.mt-4(href='/donate-now') Donate Now
+                .col-sm-12.col-lg-6.mt-5.mt-sm-5.mt-lg-0#vounteer-form-wrap
+                    .col.mb-4#form-title 
+                        h2.sub-heading-font become a volunteer
+                    .col#volunteer-form
+                        form
+                            .mb-3 
+                                input#fullname.form-content(type="text" placeholder="Full Name*")
+                            .mb-3
+                                input#email.form-content(type='email' aria-describedby='emailAddress' placeholder="Email Address*")
+                            .mb-3
+                                input#password.form-content(type='password' placeholder="Password*")
+                            .mb-3
+                                input#confirmpassword.form-content(type='password' placeholder="Confirm Password*")  
+                            button.btn.rounded-pill.white-btn-lg(type='submit') Submit Now
+
+    //- OTHER DONATIONS
+    section#other-donations
+        .container.text-center 
+            p.sub-title-font.red-font What else we do 
+            h2.sub-heading-font.dark-font.mb-5 More Causes for people in need 
+            .row.row-cols-1.row-cols-md-3.gx-3.gx-lg-5.mb-md-4
+                .col
+                    img.mb-2(src="images/More Causes/Medicine.svg", alt="Medicine Pills vector") 
+                    h2.dark-font Medicine Help 
+                    p.para-font-style.grey-font Medical fundraising campaigns are held from time to time, to support malnourished children.
+                .col 
+                    img.mb-2(src="images/More Causes/water.svg", alt="Water drop vector") 
+                    h2.dark-font Water Delivery 
+                    p.para-font-style.grey-font Many parts of India still struggles with proper drinking water, specially during floods.
+                .col 
+                    img.mb-2(src="images/More Causes/childcare.svg", alt="Child Care vector") 
+                    h2.dark-font Child Care 
+                    p.para-font-style.grey-font Children living in slums, orphans and Anganwadi are in need for special attention. 
+            .row.row-cols-1.row-cols-md-3.g-3.g-lg-4 
+                .col 
+                    img.mb-2(src="images/More Causes/food.svg", alt="Food vector Image") 
+                    h2.dark-font Food Delivery 
+                    p.para-font-style.grey-font Delivering leftovers from big restaurants chains and parties to remote villages.
+                .col
+                    img.mb-2(src="images/More Causes/worldwide.svg", alt="World vector image") 
+                    h2.dark-font Outside India 
+                    p.para-font-style.grey-font Reaching to similar organizations  in different countries for our causes.
+                .col
+                    img.mb-2(src="images/More Causes/Education.svg", alt="Education vector Image") 
+                    h2.dark-font Education 
+                    p.para-font-style.grey-font Education and awareness programs are organized regularly, even for adults.
