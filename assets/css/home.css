@@ -614,7 +614,7 @@ body:before {
 
 /*BECOME VOLUNTEER SECTION */
 #become-volunteer-section {
-  background: url("../images/backgroundimage1.jpg") center/cover no-repeat;
+  background: url("../images/volunteerBackground.jpg") center/cover no-repeat;
   position: relative;
 }
 @media (max-width: 35.99em) {
@@ -703,4 +703,111 @@ body:before {
 /*OTHER DONATIONS*/
 #other-donations {
   padding: 4% 0%;
+}
+
+/*NEWSLETTER SECTION*/
+#newsletter-section #newsletter-form {
+  background-color: #ff6d6d;
+  color: white;
+}
+#newsletter-section #newsletter-form form input {
+  width: 70%;
+  height: 65px;
+  padding: 8px 12px 8px 23px;
+  border: none;
+  font-size: 18px;
+  font-weight: 400;
+  color: #727272;
+}
+#newsletter-section #newsletter-form form button {
+  border: none;
+  box-shadow: 0 0 0 0;
+  text-transform: uppercase;
+  font-family: "Work Sans", sans-serif;
+  line-height: 1.4;
+  font-weight: 500;
+  background-color: #2e4049;
+  color: white;
+}
+#newsletter-section #newsletter-form form button:hover {
+  background-color: white;
+  color: #2e4049;
+}
+@media (max-width: 35.99em) {
+  #newsletter-section #newsletter-form form button {
+    padding: 15px 30px;
+  }
+}
+@media (min-width: 36em) and (max-width: 47.99em) {
+  #newsletter-section #newsletter-form form button {
+    padding: 20px 30px;
+  }
+}
+@media (min-width: 48em) and (max-width: 61.9275em) {
+  #newsletter-section #newsletter-form form button {
+    padding: 20px 30px;
+  }
+}
+@media (min-width: 61.9375em) {
+  #newsletter-section #newsletter-form form button {
+    padding: 20px 30px;
+  }
+}
+#newsletter-section #newsletter-form form button:hover {
+  border: 2px solid #2e4049;
+}
+#newsletter-section #recent-gallery-pics {
+  background: url("../images/newsletterbackground.jpg") center/cover no-repeat;
+  position: relative;
+  color: #2e4049;
+}
+#newsletter-section #recent-gallery-pics:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: fit-content;
+  height: 100%;
+  background-color: rgba(119, 215, 211, 0.9);
+}
+#newsletter-section #recent-gallery-pics .col {
+  position: relative;
+}
+#newsletter-section #recent-gallery-pics .col button {
+  border: none;
+  box-shadow: 0 0 0 0;
+  text-transform: uppercase;
+  font-family: "Work Sans", sans-serif;
+  line-height: 1.4;
+  font-weight: 500;
+  background-color: #2e4049;
+  color: white;
+}
+#newsletter-section #recent-gallery-pics .col button:hover {
+  background-color: white;
+  color: #2e4049;
+}
+@media (max-width: 35.99em) {
+  #newsletter-section #recent-gallery-pics .col button {
+    padding: 15px 40px;
+  }
+}
+@media (min-width: 36em) and (max-width: 47.99em) {
+  #newsletter-section #recent-gallery-pics .col button {
+    padding: 20px 50px;
+  }
+}
+@media (min-width: 48em) and (max-width: 61.9275em) {
+  #newsletter-section #recent-gallery-pics .col button {
+    padding: 20px 50px;
+  }
+}
+@media (min-width: 61.9375em) {
+  #newsletter-section #recent-gallery-pics .col button {
+    padding: 20px 50px;
+  }
+}
+#newsletter-section #recent-gallery-pics .col button:hover {
+  border: 2px solid #2e4049;
 }

@@ -138,3 +138,21 @@ block content
                     img.mb-2(src="images/More Causes/Education.svg", alt="Education vector Image") 
                     h2.dark-font Education 
                     p.para-font-style.grey-font Education and awareness programs are organized regularly, even for adults.
+
+    //- NEWSLETTER
+    section#newsletter-section
+        .container-fluid.p-0
+            .row.text-center.text-md-start 
+                .col-sm-12.col-lg-6.p-5#newsletter-form 
+                    p.sub-title-font subsribe
+                    h2.sub-heading-font newsletter
+                    p Sign Up Our Monthly Newsletter To Get The Latest News, Events, Volunteer <br/> Opportunities.
+                    .col.mt-3#newsletter-form-wrap
+                        form(action="/subsribe")
+                            input(type="email" placeholder="Enter Your Email Address").rounded-pill
+                            button(type="submit").rounded-pill.mt-3.ms-2.ms-sm-4  send
+                .col-sm-12.col-lg-6.p-5#recent-gallery-pics
+                    .col 
+                        p.sub-title-font recent gallery 
+                        h2.sub-heading-font take a look at recent gallery pics 
+                        button(type="submit").mt-5.rounded-pill recent photos
