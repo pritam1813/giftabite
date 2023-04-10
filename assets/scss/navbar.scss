@@ -1,12 +1,11 @@
-@import 'variables/colors';
+@use 'mixins/main' as main;
+@use 'partials/custom_elements' as ce;
+@use 'variables/colors' as c;
 
 /*### NAVBAR STYLE ####*/
 //Controlling Navbar elements display on mobile and small tablets
 @media screen and (max-width: 576px) {
     nav {
-        .container {
-            padding: 0px 0px 15px;
-        }
 
         #nav-buttons {
             margin-left: 5%;
@@ -19,23 +18,13 @@
             margin-left: auto;
             margin-right: auto;
         }
-
-        #nav-donate-button{
-            padding: 15px 30px;
-            font-size: 16px;
-        }
-
-        #nav-toggle-button{
-            padding: 15px 18px;
-        }
-
     }
 }
 
 @media screen and (max-width: 767px){
     #navbar-collapse{
         margin-top: -10px;
-        border-top: 1px solid $extra-nav-color;
+        border-top: 1px solid c.$extra-nav-color;
         padding-left: 2rem;
         position: absolute;
         top: 100%;
@@ -48,31 +37,13 @@
 
 //Navbar element on HD screens
 @media screen and (min-width: 1280px) {
-    #nav-donate-button {
-        margin-left: 57px;
-
-    }
-
     .nav-item{
         padding: 0px 1.5rem 0px 1.5rem;
-        border-right: 1px solid $nav-color1;
+        border-right: 1px solid c.$nav-color1;
         font-weight: 500;
     }
 }
 
-//Navbar elements design on screen bigger than mobiles
-@media screen and (min-width: 576px){
-
-    #nav-donate-button{
-        font-size: 17.5px;
-        font-weight: 500;
-        padding: 20px 30px;
-    }
-
-    #nav-toggle-button{
-        padding: 20px 18px;
-    }
-}
 
 /*Nav elements main design */
 
@@ -82,40 +53,29 @@
 }
 
 nav {
-
-    //Logo Dimensions
-    .navbar-brand {
-        img {
-            width: 204px;
-            height: 51px;
-        }
+    .container{
+        @include main.responsive-padding(0px 0px 15px, 0);
     }
+
 
     //Donate Button design
     #nav-donate-button {
-        border: none;
-        border-radius: 34px;
-        background-color: $secondary-color;
-        color: white;
-        text-transform: uppercase;
-
-        &:hover {
-            background-color: $primary-color;
-        }
+        @include ce.red-button;
+        @include main.responsive-padding(15px 30px, 20px 30px);
+        @include main.responsive-margin(0, 0, 0, 0, 0 0 0 57px);
+        @include main.responsive-fontsize(16px, 18px);
     }
 
     //toggle button design
     #nav-toggle-button {
-        border: none;
-        box-shadow: 0 0 0 0;
-        background-color: $secondary-color;
+        @include ce.red-button;
+        @include main.responsive-padding(15px, 20px 18px);
 
         &:not(.collapsed){
-            background-color: $primary-color;
+            background-color: c.$primary-color;
         }
 
         border-radius: 13px;
-        color: white;
         margin-left: 25px;
 
         i {
@@ -126,7 +86,7 @@ nav {
 
     .navbar-nav {
         .nav-link.active {
-            color: $secondary-color;
+            color: c.$secondary-color;
         }
     }
 }

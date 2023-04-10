@@ -1,0 +1,48 @@
+@use '../variables/colors' as *;
+@use 'mixins/main' as main;
+
+/* BUTTON DESIGNS */
+
+.minimal-btn-responsiveness{
+    @include main.responsive-padding(15px 30px, 20px 40px);
+    @include main.responsive-fontsize(16px, 18px);
+}
+
+.common-btn-properties{
+    border: none;
+    box-shadow: 0 0 0 0;
+    font-weight: 500;
+    text-transform: uppercase;
+    @extend .minimal-btn-responsiveness;
+}
+
+@mixin white-button($hover-bg: $tertiary-color,  $hover-color: white){
+    @extend .common-btn-properties;
+    background-color: white;
+    color: $tertiary-color;
+    &:hover{
+        background-color: $hover-bg;
+        color: $hover-color;
+    }
+}
+
+@mixin red-button($hover-bg: $primary-color , $hover-color: white){
+    @extend .common-btn-properties;
+    background-color: $secondary-color;
+    color: white;
+
+    &:hover{
+        background-color: $hover-bg;
+        $color: $hover-color;
+    }
+}
+
+@mixin black-btn($hover-bg: white, $hover-color: $tertiary-color){
+    @extend .common-btn-properties;
+    background-color: $tertiary-color;
+    color: white;
+    &:hover{
+        background-color: $hover-bg;
+        color: $hover-color;
+    }
+}

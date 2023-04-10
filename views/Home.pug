@@ -17,21 +17,21 @@ block content
                         .col-sm-5.border.border-white.border-2.d-none.d-lg-block#shape-line
                         .col-sm-9.col-md-8.col-lg-5.border.border-white.border-2.rounded-pill#shape-text BELOW POVERTY LINE
 
-                    .text-start#banner-buttons
-                        a.btn.btn-primary.red-button.rounded-pill#banner-donate-button(href='/causes') DONATE
-                        a.btn.btn-primary.white-button.rounded-pill#banner-discover-button(href='/causes') DISCOVER
+                    .text-start.mt-5#banner-buttons
+                        a.btn.rounded-pill.red-button-green-hover(href='/causes') DONATE
+                        a.btn.ms-1.ms-sm-4.mt-2.mt-sm-0.rounded-pill.white-button-green-hover#banner-discover-button(href='/causes') DISCOVER
 
     //-ABOUT US INTRO
     section#about-us-intro 
         .container 
             .row.text-center.text-md-start
                 .col-lg-4.col-md-12#col1
-                    h2 Register as a Contributor
-                    p Donating to provide healthy food for children is an important way to support their health and well-being. 
-                    a.btn.rounded-pill#intro-btn-1(href='/causes') Discover
+                    h2.sub-heading-font Register as a Contributor
+                    p.para-font-style Donating to provide healthy food for children is an important way to support their health and well-being. 
+                    a.btn.rounded-pill.white-button-black-hover(href='/causes') Discover
                 .col-lg-4.col-md-12#col2 
-                    h2 Become a Volunteer
-                    p Improve the lives of children by providing them with access to the resources they need to thrive.  
+                    h2.sub-heading-font Become a Volunteer
+                    p.para-font-style Improve the lives of children by providing them with access to the resources they need to thrive.  
                     a#join-link(href='/causes') Join Us
                 .col-lg-4.col-md-12#col3
                     
@@ -57,10 +57,10 @@ block content
                         p.sub-title-font about us
                         h2.sub-heading-font Help People,<br/> Our Main Goals
                     .col#about-section-content-wrap
-                        p Giftabite manages food donation programs for food service companies and Individuals interested in donating food. The donating process is based on donors receiving economic benefit through tax savings in addition to involvement with community and corporate goodwill.
+                        p.para-font-style Giftabite manages food donation programs for food service companies and Individuals interested in donating food. The donating process is based on donors receiving economic benefit through tax savings in addition to involvement with community and corporate goodwill.
                           <br/> <br/> Our team members have experience with major restaurant chains and retailers in operations and food quality.
                     .col
-                        a.btn.red-btn-lg.rounded-pill.mt-4#more-about-btn(href='/about-us') More About
+                        a.btn.rounded-pill.mt-4.red-button-green-hover(href='/about-us') More About
                 .col-lg-6.col-sm-12.mt-4#donation-content
                     .d-flex.justify-content-center#donation-list-content
                         ul#about-us-list
@@ -76,7 +76,7 @@ block content
                                 .progress-bar(style='width: 75%')
                         h3#total-donation.mb-4 Collection - ₹ 5.2 Lakhs
                     .col
-                        a.btn.btn-primary.rounded-pill.mt-4#donate-now-btn(href='/about-us') Donate Now
+                        a.btn.btn-primary.rounded-pill.mt-4.white-button-green-hover(href='/about-us') Donate Now
 
     //- BECOME VOLUNTEER
     section#become-volunteer-section 
@@ -91,7 +91,7 @@ block content
                     .col
                         img.img-fluid(src="images/Image2.png", alt="volunteer content section Mini image")
                     .col#become-volunteer-button
-                        a.btn.red-btn-lg.rounded-pill.mt-4(href='/donate-now') Donate Now
+                        a.btn.rounded-pill.mt-4.red-button-green-hover(href='/donate-now') Donate Now
                 .col-sm-12.col-lg-6.mt-5.mt-sm-5.mt-lg-0#vounteer-form-wrap
                     .col.mb-4#form-title 
                         h2.sub-heading-font become a volunteer
@@ -105,7 +105,7 @@ block content
                                 input#password.form-content(type='password' placeholder="Password*")
                             .mb-3
                                 input#confirmpassword.form-content(type='password' placeholder="Confirm Password*")  
-                            button.btn.rounded-pill.white-btn-lg(type='submit') Submit Now
+                            button.btn.rounded-pill.white-button-green-hover(type='submit') Submit Now
 
     //- OTHER DONATIONS
     section#other-donations
@@ -150,9 +150,9 @@ block content
                     .col.mt-3#newsletter-form-wrap
                         form(action="/subsribe")
                             input(type="email" placeholder="Enter Your Email Address").rounded-pill
-                            button(type="submit").rounded-pill.mt-3.ms-2.ms-sm-4  send
+                            button(type="submit").black-button-white-hover.rounded-pill.mt-3.ms-2.ms-sm-4  send
                 .col-sm-12.col-lg-6.p-5#recent-gallery-pics
                     .col 
                         p.sub-title-font recent gallery 
                         h2.sub-heading-font take a look at recent gallery pics 
-                        button(type="submit").mt-5.rounded-pill recent photos
+                        button(type="submit").black-button-white-hover.mt-5.rounded-pill recent photos

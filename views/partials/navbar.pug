@@ -3,10 +3,10 @@ nav.navbar.navbar-expand-md.navbar-light#main-navbar(role='banner')
   .container
     //- Logo
     a.navbar-brand.mb-1(href='/')
-      img(src='images/Logo.png' loading='lazy' alt='Giftabite Logo')
+      img.img-fluid(src='images/Logo.png' loading='lazy' alt='Giftabite Logo')
     //- Buttons
     .d-flex.align-items-center.justify-content-between#nav-buttons
-      a.btn.d-md-none.btn-primary#nav-donate-button(href='/causes') Donate
+      a.btn.d-md-none.rounded-pill#nav-donate-button(href='/causes') Donate
       button.navbar-toggler.collapsed#nav-toggle-button(type='button' data-bs-toggle='collapse' data-bs-target='#navbar-collapse' aria-controls='navbar-collapse' aria-expanded='false' aria-label='Toggle navigation')
         i.fa-solid.fa-bars
 
@@ -34,4 +34,4 @@ nav.navbar.navbar-expand-md.navbar-light#main-navbar(role='banner')
                         a.dropdown-item(href='/blog') Blog
             li.nav-item
                 a.nav-link(href='/contact-us') Contact
-        a.btn.d-none.d-md-block.btn-primary#nav-donate-button(href='/causes') Donate
+        a.btn.d-none.d-md-block.rounded-pill#nav-donate-button(href='/causes') Donate

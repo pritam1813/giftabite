@@ -1,0 +1,17 @@
+$breakpoints: (
+  xs: 0px,
+  mobile: 576px,
+  tablet: 768px,
+  desktop: 991px,
+  wide: 1200px,
+  xxl: 1400px
+);
+
+$show-breakpoints: (xs, mobile, tablet, desktop, wide, xxl);
+
+@use '../../../node_modules/sass-mq/mq' with (
+  $breakpoints: $breakpoints,
+  $show-breakpoints: $show-breakpoints
+);
+
+@forward '../../../node_modules/sass-mq/mq';

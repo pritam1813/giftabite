@@ -1,6 +1,5 @@
-@import 'variables/colors';
-@import 'partials/mixins';
-@import 'mixins/hompage-mixins';
+@use 'mixins/main' as main;
+@use 'variables/colors' as *;
 
 /*## CUSTOM CLASSES ##*/
 .footer-sub-heading-font {
@@ -24,15 +23,15 @@ footer{
     color: white;
 
     #footer-section-wrap{
-        @include responsive-padding-gen(80px 0px 40px,80px 0px 80px,80px 0px 80px,110px 0px 85px);
+        @include main.responsive-padding(80px 0px 40px,80px 0px 80px,80px 0px 80px,110px 0px 85px);
 
         #footer-content{
-            @include responsive-padding-gen(0 0 60px, 0 0 60px, 0 0 60px, 0 60px 0 0);
+            @include main.responsive-padding(0 0 60px, 0 0 60px, 0 0 60px, 0 60px 0 0);
 
             ul{
                 li{
-                    @include responsive-width(55px, 60px, 60px, 60px);
-                    @include responsive-height-gen(55px, 60px, 60px, 60px);
+                    @include main.responsive-width(55px, 60px, 60px, 60px);
+                    @include main.responsive-height(55px, 60px, 60px, 60px);
                     border: none;
                     color: white;
                     background-color: $footer-color-1;
@@ -52,7 +51,7 @@ footer{
 
         #footer-widget{
             background-color: $footer-color-1;
-            @include responsive-padding-gen(20px 20px 40px, 40px 20px 60px 40px, 40px 20px 60px 55px, 40px 20px 60px 60px);
+            @include main.responsive-padding(20px 20px 40px, 40px 20px 60px 40px, 40px 20px 60px 55px, 40px 20px 60px 60px);
             ul{
                 padding: 10px 0 0;
                 list-style: none;
@@ -67,7 +66,7 @@ footer{
     #copyright-section-wrap{
         border-top: 1px solid $footer-color-2;
         .d-flex{
-            @include responsive-padding-gen(25px 20px, 25px 20px, 25px 20px, 25px 0)
+            @include main.responsive-padding(25px 20px, 25px 20px, 25px 20px, 25px 0)
         }
     }
     

@@ -1,33 +1,111 @@
-@import '../variables/colors';
+@use 'breakpoints' as mq;
+@use '../variables/colors' as *;
 
-/* BUTTON DESIGNS */
-
-@mixin white-button($padding, $font-size, $hover-background: $tertiary-color){
-    border: none;
-    box-shadow: 0 0 0 0;
-    background-color: white;
-    color: $tertiary-color;
-    padding: $padding;
-    font-size: $font-size;
-    font-weight: 500;
-    text-transform: uppercase;
-    &:hover{
-        background-color: $hover-background;
-        color: white;
+/* WIDTH AND HEIGHT */
+@mixin responsive-height($uptomobile, $mobiletotab: $uptomobile, $tabtodesktop: $mobiletotab, $desktoptohd: $tabtodesktop, $hdtoUltra: $desktoptohd, $aboveUltra: $hdtoUltra){
+    @include mq.mq($until: mobile){
+        height: $uptomobile;
+    }
+    @include mq.mq($from: mobile, $until: tablet){
+        height: $mobiletotab;
+    }
+    @include mq.mq($from: tablet, $until: desktop){
+        height: $tabtodesktop;
+    }
+    @include mq.mq($from: desktop, $until: wide){
+        height: $desktoptohd;
+    }
+    @include mq.mq($from: wide, $until: xxl){
+        height: $hdtoUltra;
+    }
+    @include mq.mq($from: xxl){
+        height: $aboveUltra;
     }
 }
 
-@mixin red-button($padding, $font-size){
-    border: none;
-    box-shadow: 0 0 0 0;
-    background-color: $secondary-color;
-    color: white;
-    padding: $padding;
-    font-size: $font-size;
-    font-weight: 500;
-    text-transform: uppercase;
+@mixin responsive-width($uptomobile, $mobiletotab: $uptomobile, $tabtodesktop: $mobiletotab, $desktoptohd: $tabtodesktop, $hdtoUltra: $desktoptohd, $aboveUltra: $hdtoUltra){
+    @include mq.mq($until: mobile){
+        width: $uptomobile;
+    }
+    @include mq.mq($from: mobile, $until: tablet){
+        width: $mobiletotab;
+    }
+    @include mq.mq($from: tablet, $until: desktop){
+        width: $tabtodesktop;
+    }
+    @include mq.mq($from: desktop, $until: wide){
+        width: $desktoptohd;
+    }
+    @include mq.mq($from: wide, $until: xxl){
+        width: $hdtoUltra;
+    }
+    @include mq.mq($from: xxl){
+        width: $aboveUltra;
+    }
+}
 
-    &:hover{
-        background-color: $primary-color;
+/* PADDINGS AND MARGINS */
+
+@mixin responsive-padding($uptomobile, $mobiletotab: $uptomobile, $tabtodesktop: $mobiletotab, $desktoptohd: $tabtodesktop, $hdtoUltra: $desktoptohd, $aboveUltra: $hdtoUltra){
+    @include mq.mq($until: mobile){
+        padding: $uptomobile;
+    }
+    @include mq.mq($from: mobile, $until: tablet){
+        padding: $mobiletotab;
+    }
+    @include mq.mq($from: tablet, $until: desktop){
+        padding: $tabtodesktop;
+    }
+    @include mq.mq($from: desktop, $until: wide){
+        padding: $desktoptohd;
+    }
+    @include mq.mq($from: wide, $until: xxl){
+        padding: $hdtoUltra;
+    }
+    @include mq.mq($from: xxl){
+        padding: $aboveUltra;
+    }
+}
+
+@mixin responsive-margin($uptomobile, $mobiletotab: $uptomobile, $tabtodesktop: $mobiletotab, $desktoptohd: $tabtodesktop, $hdtoUltra: $desktoptohd, $aboveUltra: $hdtoUltra){
+    @include mq.mq($until: mobile){
+        margin: $uptomobile;
+    }
+    @include mq.mq($from: mobile, $until: tablet){
+        margin: $mobiletotab;
+    }
+    @include mq.mq($from: tablet, $until: desktop){
+        margin: $tabtodesktop;
+    }
+    @include mq.mq($from: desktop, $until: wide){
+        margin: $desktoptohd;
+    }
+    @include mq.mq($from: wide, $until: xxl){
+        margin: $hdtoUltra;
+    }
+    @include mq.mq($from: xxl){
+        margin: $aboveUltra;
+    }
+}
+
+/* FONTS */
+@mixin responsive-fontsize($uptomobile, $mobiletotab: $uptomobile, $tabtodesktop: $mobiletotab, $desktoptohd: $tabtodesktop, $hdtoUltra: $desktoptohd, $aboveUltra: $hdtoUltra){
+    @include mq.mq($until: mobile){
+        font-size: $uptomobile;
+    }
+    @include mq.mq($from: mobile, $until: tablet){
+        font-size: $mobiletotab;
+    }
+    @include mq.mq($from: tablet, $until: desktop){
+        font-size: $tabtodesktop;
+    }
+    @include mq.mq($from: desktop, $until: wide){
+        font-size: $desktoptohd;
+    }
+    @include mq.mq($from: wide, $until: xxl){
+        font-size: $hdtoUltra;
+    }
+    @include mq.mq($from: xxl){
+        font-size: $aboveUltra;
     }
 }

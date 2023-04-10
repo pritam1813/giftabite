@@ -1,7 +1,67 @@
+@use 'variables/colors' as *;
+@use 'mixins/main' as main;
+@use 'partials/custom_elements' as ce;
+
 body{
     .row{
         margin: 0%;
     }
     font-size: 20px;
     font-family: 'Work Sans', sans-serif;
+}
+
+
+/*## CUSTOM CLASSES ##*/
+
+//FONTS STYLING
+.red-font{
+    color: $secondary-color;
+}
+
+.dark-font{
+    color: $tertiary-color;
+}
+
+.grey-font{
+    color: $home-color2;
+}
+
+.sub-title-font {
+    @include main.responsive-fontsize(25px, 25px, 30px, 35px);
+    font-family: 'Sue Ellen Francisco', sans-serif;
+    text-transform: capitalize;
+}
+
+.sub-heading-font {
+    font-family: 'Shippori Mincho', sans-serif;
+    text-transform: capitalize;
+    @include main.responsive-fontsize(28px, 28px, 34px, 40px);
+    line-height: 1.3;
+    font-weight: 800;
+}
+
+.para-font-style {
+    line-height: 1.3;
+    text-transform: capitalize;
+    @include main.responsive-fontsize(17px, 18px, 19px, 20px);
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+}
+
+
+//CUSTOM BUTTON CLASSES
+.red-button-green-hover{
+    @include ce.red-button;
+}
+
+.white-button-green-hover{
+    @include ce.white-button($primary-color);
+}
+
+.white-button-black-hover{
+    @include ce.white-button($tertiary-color);
+}
+
+.black-button-white-hover{
+    @include ce.black-btn;
 }

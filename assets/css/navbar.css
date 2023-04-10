@@ -1,13 +1,127 @@
+@charset "UTF-8";
+body:before {
+  background-color: #fcf8e3;
+  border-bottom: 1px solid #fbeed5;
+  border-left: 1px solid #fbeed5;
+  color: #c09853;
+  font: small-caption;
+  padding: 3px 6px;
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 100;
+}
+@media (min-width: 0em) {
+  body:before {
+    content: "xs ≥ 0px (0em)";
+  }
+}
+@media (min-width: 36em) {
+  body:before {
+    content: "mobile ≥ 576px (36em)";
+  }
+}
+@media (min-width: 48em) {
+  body:before {
+    content: "tablet ≥ 768px (48em)";
+  }
+}
+@media (min-width: 61.9375em) {
+  body:before {
+    content: "desktop ≥ 991px (61.9375em)";
+  }
+}
+@media (min-width: 75em) {
+  body:before {
+    content: "wide ≥ 1200px (75em)";
+  }
+}
+@media (min-width: 87.5em) {
+  body:before {
+    content: "xxl ≥ 1400px (87.5em)";
+  }
+}
+
 /* MAIN COLORS */
 /* HEADER COLORS */
 /*Navbar Colors*/
 /*Homepage Colors*/
 /* Footer Colors */
+/* WIDTH AND HEIGHT */
+/* PADDINGS AND MARGINS */
+/* FONTS */
+/* BUTTON DESIGNS */
+@media (max-width: 35.99em) {
+  .minimal-btn-responsiveness, .common-btn-properties, nav #nav-donate-button, nav #nav-toggle-button {
+    padding: 15px 30px;
+  }
+}
+@media (min-width: 36em) and (max-width: 47.99em) {
+  .minimal-btn-responsiveness, .common-btn-properties, nav #nav-donate-button, nav #nav-toggle-button {
+    padding: 20px 40px;
+  }
+}
+@media (min-width: 48em) and (max-width: 61.9275em) {
+  .minimal-btn-responsiveness, .common-btn-properties, nav #nav-donate-button, nav #nav-toggle-button {
+    padding: 20px 40px;
+  }
+}
+@media (min-width: 61.9375em) and (max-width: 74.99em) {
+  .minimal-btn-responsiveness, .common-btn-properties, nav #nav-donate-button, nav #nav-toggle-button {
+    padding: 20px 40px;
+  }
+}
+@media (min-width: 75em) and (max-width: 87.49em) {
+  .minimal-btn-responsiveness, .common-btn-properties, nav #nav-donate-button, nav #nav-toggle-button {
+    padding: 20px 40px;
+  }
+}
+@media (min-width: 87.5em) {
+  .minimal-btn-responsiveness, .common-btn-properties, nav #nav-donate-button, nav #nav-toggle-button {
+    padding: 20px 40px;
+  }
+}
+@media (max-width: 35.99em) {
+  .minimal-btn-responsiveness, .common-btn-properties, nav #nav-donate-button, nav #nav-toggle-button {
+    font-size: 16px;
+  }
+}
+@media (min-width: 36em) and (max-width: 47.99em) {
+  .minimal-btn-responsiveness, .common-btn-properties, nav #nav-donate-button, nav #nav-toggle-button {
+    font-size: 18px;
+  }
+}
+@media (min-width: 48em) and (max-width: 61.9275em) {
+  .minimal-btn-responsiveness, .common-btn-properties, nav #nav-donate-button, nav #nav-toggle-button {
+    font-size: 18px;
+  }
+}
+@media (min-width: 61.9375em) and (max-width: 74.99em) {
+  .minimal-btn-responsiveness, .common-btn-properties, nav #nav-donate-button, nav #nav-toggle-button {
+    font-size: 18px;
+  }
+}
+@media (min-width: 75em) and (max-width: 87.49em) {
+  .minimal-btn-responsiveness, .common-btn-properties, nav #nav-donate-button, nav #nav-toggle-button {
+    font-size: 18px;
+  }
+}
+@media (min-width: 87.5em) {
+  .minimal-btn-responsiveness, .common-btn-properties, nav #nav-donate-button, nav #nav-toggle-button {
+    font-size: 18px;
+  }
+}
+
+.common-btn-properties, nav #nav-donate-button, nav #nav-toggle-button {
+  border: none;
+  box-shadow: 0 0 0 0;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
 /*### NAVBAR STYLE ####*/
 @media screen and (max-width: 576px) {
-  nav .container {
-    padding: 0px 0px 15px;
-  }
   nav #nav-buttons {
     margin-left: 5%;
     width: 90%;
@@ -17,13 +131,6 @@
   nav .navbar-brand {
     margin-left: auto;
     margin-right: auto;
-  }
-  nav #nav-donate-button {
-    padding: 15px 30px;
-    font-size: 16px;
-  }
-  nav #nav-toggle-button {
-    padding: 15px 18px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -40,23 +147,10 @@
   }
 }
 @media screen and (min-width: 1280px) {
-  #nav-donate-button {
-    margin-left: 57px;
-  }
   .nav-item {
     padding: 0px 1.5rem 0px 1.5rem;
     border-right: 1px solid #d0d0d0;
     font-weight: 500;
-  }
-}
-@media screen and (min-width: 576px) {
-  #nav-donate-button {
-    font-size: 17.5px;
-    font-weight: 500;
-    padding: 20px 30px;
-  }
-  #nav-toggle-button {
-    padding: 20px 18px;
   }
 }
 /*Nav elements main design */
@@ -65,27 +159,171 @@
   padding-bottom: 35px;
 }
 
-nav .navbar-brand img {
-  width: 204px;
-  height: 51px;
+@media (max-width: 35.99em) {
+  nav .container {
+    padding: 0px 0px 15px;
+  }
+}
+@media (min-width: 36em) and (max-width: 47.99em) {
+  nav .container {
+    padding: 0;
+  }
+}
+@media (min-width: 48em) and (max-width: 61.9275em) {
+  nav .container {
+    padding: 0;
+  }
+}
+@media (min-width: 61.9375em) and (max-width: 74.99em) {
+  nav .container {
+    padding: 0;
+  }
+}
+@media (min-width: 75em) and (max-width: 87.49em) {
+  nav .container {
+    padding: 0;
+  }
+}
+@media (min-width: 87.5em) {
+  nav .container {
+    padding: 0;
+  }
 }
 nav #nav-donate-button {
-  border: none;
-  border-radius: 34px;
   background-color: #ff6d6d;
   color: white;
-  text-transform: uppercase;
 }
 nav #nav-donate-button:hover {
   background-color: #77d7d3;
 }
+@media (max-width: 35.99em) {
+  nav #nav-donate-button {
+    padding: 15px 30px;
+  }
+}
+@media (min-width: 36em) and (max-width: 47.99em) {
+  nav #nav-donate-button {
+    padding: 20px 30px;
+  }
+}
+@media (min-width: 48em) and (max-width: 61.9275em) {
+  nav #nav-donate-button {
+    padding: 20px 30px;
+  }
+}
+@media (min-width: 61.9375em) and (max-width: 74.99em) {
+  nav #nav-donate-button {
+    padding: 20px 30px;
+  }
+}
+@media (min-width: 75em) and (max-width: 87.49em) {
+  nav #nav-donate-button {
+    padding: 20px 30px;
+  }
+}
+@media (min-width: 87.5em) {
+  nav #nav-donate-button {
+    padding: 20px 30px;
+  }
+}
+@media (max-width: 35.99em) {
+  nav #nav-donate-button {
+    margin: 0;
+  }
+}
+@media (min-width: 36em) and (max-width: 47.99em) {
+  nav #nav-donate-button {
+    margin: 0;
+  }
+}
+@media (min-width: 48em) and (max-width: 61.9275em) {
+  nav #nav-donate-button {
+    margin: 0;
+  }
+}
+@media (min-width: 61.9375em) and (max-width: 74.99em) {
+  nav #nav-donate-button {
+    margin: 0;
+  }
+}
+@media (min-width: 75em) and (max-width: 87.49em) {
+  nav #nav-donate-button {
+    margin: 0 0 0 57px;
+  }
+}
+@media (min-width: 87.5em) {
+  nav #nav-donate-button {
+    margin: 0 0 0 57px;
+  }
+}
+@media (max-width: 35.99em) {
+  nav #nav-donate-button {
+    font-size: 16px;
+  }
+}
+@media (min-width: 36em) and (max-width: 47.99em) {
+  nav #nav-donate-button {
+    font-size: 18px;
+  }
+}
+@media (min-width: 48em) and (max-width: 61.9275em) {
+  nav #nav-donate-button {
+    font-size: 18px;
+  }
+}
+@media (min-width: 61.9375em) and (max-width: 74.99em) {
+  nav #nav-donate-button {
+    font-size: 18px;
+  }
+}
+@media (min-width: 75em) and (max-width: 87.49em) {
+  nav #nav-donate-button {
+    font-size: 18px;
+  }
+}
+@media (min-width: 87.5em) {
+  nav #nav-donate-button {
+    font-size: 18px;
+  }
+}
 nav #nav-toggle-button {
-  border: none;
-  box-shadow: 0 0 0 0;
   background-color: #ff6d6d;
-  border-radius: 13px;
   color: white;
+  border-radius: 13px;
   margin-left: 25px;
+}
+nav #nav-toggle-button:hover {
+  background-color: #77d7d3;
+}
+@media (max-width: 35.99em) {
+  nav #nav-toggle-button {
+    padding: 15px;
+  }
+}
+@media (min-width: 36em) and (max-width: 47.99em) {
+  nav #nav-toggle-button {
+    padding: 20px 18px;
+  }
+}
+@media (min-width: 48em) and (max-width: 61.9275em) {
+  nav #nav-toggle-button {
+    padding: 20px 18px;
+  }
+}
+@media (min-width: 61.9375em) and (max-width: 74.99em) {
+  nav #nav-toggle-button {
+    padding: 20px 18px;
+  }
+}
+@media (min-width: 75em) and (max-width: 87.49em) {
+  nav #nav-toggle-button {
+    padding: 20px 18px;
+  }
+}
+@media (min-width: 87.5em) {
+  nav #nav-toggle-button {
+    padding: 20px 18px;
+  }
 }
 nav #nav-toggle-button:not(.collapsed) {
   background-color: #77d7d3;

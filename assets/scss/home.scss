@@ -1,68 +1,8 @@
-@import 'variables/colors';
-@import 'partials/mixins';
-@import 'mixins/hompage-mixins';
+@use 'mixins/main' as main;
+@use 'variables/colors' as *;
+@use 'partials/custom_elements' as ce;
 
 /*### HOMEPAGE STYLE ####*/
-
-/* Media Queries */
-
-//Above Tablet screens
-@media (min-width: 769px) {
-    #about-us-intro {
-        .container {
-            margin-top: -5%;
-        }
-    }
-}
-
-/*## CUSTOM CLASSES ##*/
-
-//Fonts
-.red-font{
-    color: $secondary-color;
-}
-
-.dark-font{
-    color: $tertiary-color;
-}
-
-.grey-font{
-    color: $home-color2;
-}
-
-.sub-title-font {
-    @include responsive-fontsize-gen(25px, 25px, 30px, 35px);
-    font-family: 'Sue Ellen Francisco', sans-serif;
-    text-transform: capitalize;
-}
-
-.sub-heading-font {
-    font-family: 'Shippori Mincho', sans-serif;
-    text-transform: capitalize;
-    @include responsive-fontsize-gen(28px, 28px, 34px, 40px);
-    line-height: 1.3;
-    font-weight: 800;
-}
-
-.para-font-style {
-    line-height: 1.3;
-    text-transform: capitalize;
-    @include responsive-fontsize-gen(17px, 18px, 19px, 20px);
-    font-family: 'Work Sans', sans-serif;
-    font-weight: 400;
-}
-
-//Buttons
-.red-btn-lg {
-    @include responsive-red-button(15px 30px, 20px 40px, 16px, 18px, 0%, 0%, mobile);
-}
-
-.white-btn-lg{
-    @include responsive-white-button(15px 30px, 20px 40px, 16px, 18px, 0%, 0%, mobile);
-    &:hover{
-        background-color: $primary-color;
-    }
-}
 
 /* TOP BANNER DESIGN*/
 #main-Banner {
@@ -72,7 +12,7 @@
         background: url('../images/banner.jpg') center/cover no-repeat;
 
         //Responsive Height
-        @include responsive-height-gen(500px, 600px, 750px, 950px);
+        @include main.responsive-height(500px, 600px, 750px, 950px);
 
         #banner-title-wrap {
             padding: 1%;
@@ -82,16 +22,17 @@
 
             p {
                 font-weight: 400;
-                @include responsive-fontsize-gen(36px, 36px, 40px, 50px);
+                @include main.responsive-fontsize(35px, 36px, 40px, 50px);
             }
 
             #banner-heading {
                 width: auto;
                 //Responsive font size
-                @include resposive-fontsize-ext(35px, 38px, 50px, 70px, 90px);
+                @include main.responsive-fontsize(35px, 38px, 50px, 70px, 90px);
 
                 font-family: 'Shippori Mincho', sans-serif;
                 font-weight: 800;
+                line-height: 1.2;
             }
 
             #banner-shape {
@@ -119,18 +60,6 @@
                     text-transform: uppercase;
                 }
             }
-
-            #banner-buttons {
-                #banner-donate-button {
-                    @include responsive-red-button(15px 30px, 20px 30px, 16px, 18px, 0, 0, mobile);
-                }
-
-                #banner-discover-button {
-                    @include responsive-white-button(15px 30px, 20px 30px, 16px, 18px, 2%, 4%, mobile);
-                }
-
-                margin-top: 6%;
-            }
         }
     }
 }
@@ -138,45 +67,29 @@
 /* ABOUT US INTRO SECTION */
 #about-us-intro {
     .container {
-        @include responsive-width(90%, 90%, 100%, 100%);
+        @include main.responsive-margin(auto, auto,  -5% auto auto);
+        @include main.responsive-width(90%, 90%, 100%);
 
         .row {
+            #col1{
+                @include main.responsive-padding(40px 20px, 50px 20px 60px, 50px 30px 60px 46px);
+                background-color: $primary-color;
+                color: $tertiary-color;
+            }
+
+            #col2{
+                @include main.responsive-padding(40px 20px 60px, 60px 20px, 60px 19px 60px 46px, 40px 19px 40px 46px);
+                background-color: $tertiary-color;
+                color: white;
+            }
             .col-lg-4 {
-                padding: 50px 30px 60px 46px;
-
-                h2 {
-                    font-family: 'Shippori Mincho', sans-serif;
-                    line-height: 1.3;
-                    font-weight: 800;
-                }
-
                 p {
                     padding-top: 10px;
-                    font-family: 'Work Sans', sans-serif;
-                    font-size: 20px;
-                    line-height: 1.5;
-                    font-weight: 400;
-                }
-
-                #intro-btn-1 {
-                    @include responsive-white-button(15px 30px, 20px 40px, 16px, 18px, 0%, 0%, desktop);
                 }
 
                 #join-link {
                     color: white;
                 }
-
-            }
-
-
-            #col1 {
-                background-color: $primary-color;
-                color: $tertiary-color;
-            }
-
-            #col2 {
-                background-color: $tertiary-color;
-                color: white;
             }
 
             #col3 {
@@ -242,22 +155,16 @@
             p {
                 margin-bottom: 10px;
                 padding-top: 10px;
-                font-family: 'Work Sans', sans-serif;
                 color: $home-color2;
                 line-height: 1.5;
-                @include responsive-fontsize-gen(18px, 18px, 20px, 20px);
-                font-weight: 400;
             }
         }
+
     }
 
     #donation-content {
         padding: 60px 40px 46px;
         background-color: $home-color1;
-
-        #donate-now-btn {
-            @include white-button(20px 40px, 18px, $primary-color)
-        }
 
         #about-us-list {
             list-style: none;
@@ -276,8 +183,6 @@
 
         #total-donation-wrap {
             #total-donation-wrap-heading {
-                @include sub-heading(30px);
-
                 h2 {
                     font-weight: 800;
                 }
@@ -305,7 +210,7 @@
 #become-volunteer-section {
     background: url('../images/volunteerBackground.jpg') center/cover no-repeat;
     position: relative;
-    @include responsive-padding-gen(80px 0px, 80px 0px, 100px 0px, 140px 0px);
+    @include main.responsive-padding(80px 0px, 80px 0px, 100px 0px, 140px 0px);
 
     &:before {
         content: "";
@@ -315,7 +220,6 @@
         width: 100%;
         height: 100%;
         background-color: rgba(46, 64, 73, 0.96);
-
     }
 
     .container {
@@ -324,7 +228,7 @@
 
         #vounteer-form-wrap {
             border: 1px solid white;
-            @include responsive-padding-ext(40px 20px 25px, 50px 20px 25px, 50px 20px 25px, 50px 35px 30px, 60px 65px 40px);
+            @include main.responsive-padding(40px 20px 25px, 50px 20px 25px, 50px 20px 25px, 50px 35px 30px, 60px 65px 40px);
 
             form {
                 input {
@@ -349,6 +253,7 @@
                     }
                 }
             }
+
         }
     }
 }
@@ -376,8 +281,8 @@
             }
 
             button{
-                @include black-btn;
-                @include responsive-padding-gen(15px 30px, 20px 30px, 20px 30px, 20px 30px);
+                @include ce.black-btn;
+                @include main.responsive-padding(15px 30px, 20px 30px, 20px 30px, 20px 30px);
                 &:hover{
                     border: 2px solid $tertiary-color;
                 } 
@@ -406,8 +311,6 @@
             position: relative;
 
             button{
-                @include black-btn;
-                @include responsive-padding-gen(15px 40px, 20px 50px, 20px 50px, 20px 50px);
                 &:hover{
                     border: 2px solid $tertiary-color;
                 } 
