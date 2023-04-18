@@ -19,7 +19,8 @@ footer
                         .col-sm-12.col-md-6.col-xl-4
                             h3.footer-sub-heading-font Who are we
                             ul 
-                                li About Us
+                                li 
+                                 a(href="/about-us") About Us
                                 li Mission
                                 li Our Causes 
                                 li Campaigns 
@@ -38,6 +39,5 @@ footer
                             | Mumbai <br/> Maharashtra - 400092 <br/> INDIA
     .container-fluid.p-0#copyright-section-wrap
         .d-flex.justify-content-center
-            h5.m-0 Copyright © Giftabyte | 2022-2023 
-
-                
+            - let currentyear = new Date().getFullYear();
+            h5.m-0 Copyright © Giftabyte | 2022-#{currentyear}

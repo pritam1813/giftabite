@@ -1,0 +1,397 @@
+@charset "UTF-8";
+body:before {
+  background-color: #fcf8e3;
+  border-bottom: 1px solid #fbeed5;
+  border-left: 1px solid #fbeed5;
+  color: #c09853;
+  font: small-caption;
+  padding: 3px 6px;
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 100;
+}
+@media (min-width: 0em) {
+  body:before {
+    content: "xs ≥ 0px (0em)";
+  }
+}
+@media (min-width: 36em) {
+  body:before {
+    content: "mobile ≥ 576px (36em)";
+  }
+}
+@media (min-width: 48em) {
+  body:before {
+    content: "tablet ≥ 768px (48em)";
+  }
+}
+@media (min-width: 61.9375em) {
+  body:before {
+    content: "desktop ≥ 991px (61.9375em)";
+  }
+}
+@media (min-width: 75em) {
+  body:before {
+    content: "wide ≥ 1200px (75em)";
+  }
+}
+@media (min-width: 87.5em) {
+  body:before {
+    content: "xxl ≥ 1400px (87.5em)";
+  }
+}
+
+/* MAIN COLORS */
+/* HEADER COLORS */
+/*Navbar Colors*/
+/*Homepage Colors*/
+/* Footer Colors */
+/* WIDTH AND HEIGHT */
+/* PADDINGS AND MARGINS */
+/* FONTS */
+/*### ABOUT US PAGE STYLE ####*/
+#about-us-Banner #banner-container {
+  width: 100%;
+  background: url("../images/about-us-banner.jpg") center/cover no-repeat;
+  color: white;
+}
+@media (max-width: 35.99em) {
+  #about-us-Banner #banner-container {
+    height: 460px;
+  }
+}
+@media (min-width: 36em) and (max-width: 47.99em) {
+  #about-us-Banner #banner-container {
+    height: 520px;
+  }
+}
+@media (min-width: 48em) and (max-width: 61.9275em) {
+  #about-us-Banner #banner-container {
+    height: 600px;
+  }
+}
+@media (min-width: 61.9375em) and (max-width: 74.99em) {
+  #about-us-Banner #banner-container {
+    height: 822px;
+  }
+}
+@media (min-width: 75em) and (max-width: 87.49em) {
+  #about-us-Banner #banner-container {
+    height: 822px;
+  }
+}
+@media (min-width: 87.5em) {
+  #about-us-Banner #banner-container {
+    height: 822px;
+  }
+}
+#about-us-Banner #banner-container p {
+  font-weight: 400;
+}
+@media (max-width: 35.99em) {
+  #about-us-Banner #banner-container p {
+    font-size: 35px;
+  }
+}
+@media (min-width: 36em) and (max-width: 47.99em) {
+  #about-us-Banner #banner-container p {
+    font-size: 36px;
+  }
+}
+@media (min-width: 48em) and (max-width: 61.9275em) {
+  #about-us-Banner #banner-container p {
+    font-size: 40px;
+  }
+}
+@media (min-width: 61.9375em) and (max-width: 74.99em) {
+  #about-us-Banner #banner-container p {
+    font-size: 50px;
+  }
+}
+@media (min-width: 75em) and (max-width: 87.49em) {
+  #about-us-Banner #banner-container p {
+    font-size: 50px;
+  }
+}
+@media (min-width: 87.5em) {
+  #about-us-Banner #banner-container p {
+    font-size: 50px;
+  }
+}
+#about-us-Banner #banner-container h1 {
+  width: auto;
+  font-family: "Shippori Mincho", sans-serif;
+  font-weight: 800;
+  line-height: 1.2;
+}
+@media (max-width: 35.99em) {
+  #about-us-Banner #banner-container h1 {
+    font-size: 35px;
+  }
+}
+@media (min-width: 36em) and (max-width: 47.99em) {
+  #about-us-Banner #banner-container h1 {
+    font-size: 38px;
+  }
+}
+@media (min-width: 48em) and (max-width: 61.9275em) {
+  #about-us-Banner #banner-container h1 {
+    font-size: 50px;
+  }
+}
+@media (min-width: 61.9375em) and (max-width: 74.99em) {
+  #about-us-Banner #banner-container h1 {
+    font-size: 70px;
+  }
+}
+@media (min-width: 75em) and (max-width: 87.49em) {
+  #about-us-Banner #banner-container h1 {
+    font-size: 90px;
+  }
+}
+@media (min-width: 87.5em) {
+  #about-us-Banner #banner-container h1 {
+    font-size: 90px;
+  }
+}
+
+@media (max-width: 35.99em) {
+  #goals-and-mission .container {
+    padding: 75px 0px 80px;
+  }
+}
+@media (min-width: 36em) and (max-width: 47.99em) {
+  #goals-and-mission .container {
+    padding: 75px 0px 100px;
+  }
+}
+@media (min-width: 48em) and (max-width: 61.9275em) {
+  #goals-and-mission .container {
+    padding: 75px 0px 205px;
+  }
+}
+@media (min-width: 61.9375em) and (max-width: 74.99em) {
+  #goals-and-mission .container {
+    padding: 75px 0px 220px;
+  }
+}
+@media (min-width: 75em) and (max-width: 87.49em) {
+  #goals-and-mission .container {
+    padding: 75px 0px 220px;
+  }
+}
+@media (min-width: 87.5em) {
+  #goals-and-mission .container {
+    padding: 75px 0px 220px;
+  }
+}
+#goals-and-mission .container h2 {
+  margin-bottom: 10px;
+  font-family: "Shippori Mincho", sans-serif;
+  line-height: 1.3;
+  font-weight: 800;
+}
+@media (max-width: 35.99em) {
+  #goals-and-mission .container h2 {
+    font-size: 28px;
+  }
+}
+@media (min-width: 36em) and (max-width: 47.99em) {
+  #goals-and-mission .container h2 {
+    font-size: 34px;
+  }
+}
+@media (min-width: 48em) and (max-width: 61.9275em) {
+  #goals-and-mission .container h2 {
+    font-size: 40px;
+  }
+}
+@media (min-width: 61.9375em) and (max-width: 74.99em) {
+  #goals-and-mission .container h2 {
+    font-size: 40px;
+  }
+}
+@media (min-width: 75em) and (max-width: 87.49em) {
+  #goals-and-mission .container h2 {
+    font-size: 40px;
+  }
+}
+@media (min-width: 87.5em) {
+  #goals-and-mission .container h2 {
+    font-size: 40px;
+  }
+}
+#goals-and-mission .container p {
+  margin-bottom: 10px;
+  padding-top: 10px;
+}
+#goals-and-mission .container .goal-list {
+  padding-top: 4px;
+}
+#goals-and-mission .container .goal-list .col-12 {
+  max-width: max-content;
+  color: #2e4049;
+  background-color: #f2f2f2;
+}
+@media (max-width: 35.99em) {
+  #goals-and-mission .container .goal-list .col-12 {
+    font-size: 18px;
+  }
+}
+@media (min-width: 36em) and (max-width: 47.99em) {
+  #goals-and-mission .container .goal-list .col-12 {
+    font-size: 18px;
+  }
+}
+@media (min-width: 48em) and (max-width: 61.9275em) {
+  #goals-and-mission .container .goal-list .col-12 {
+    font-size: 19px;
+  }
+}
+@media (min-width: 61.9375em) and (max-width: 74.99em) {
+  #goals-and-mission .container .goal-list .col-12 {
+    font-size: 20px;
+  }
+}
+@media (min-width: 75em) and (max-width: 87.49em) {
+  #goals-and-mission .container .goal-list .col-12 {
+    font-size: 20px;
+  }
+}
+@media (min-width: 87.5em) {
+  #goals-and-mission .container .goal-list .col-12 {
+    font-size: 20px;
+  }
+}
+#goals-and-mission .container #goal-and-image-wrap #goal-quote {
+  width: 60%;
+  background-color: #77d7d3;
+  text-align: center;
+}
+#goals-and-mission .container #goal-quote {
+  color: #2e4049;
+  position: relative;
+  background-color: #77d7d3;
+}
+@media (max-width: 35.99em) {
+  #goals-and-mission .container #goal-quote {
+    padding: 20px 10px;
+  }
+}
+@media (min-width: 36em) and (max-width: 47.99em) {
+  #goals-and-mission .container #goal-quote {
+    padding: 20px 0px;
+  }
+}
+@media (min-width: 48em) and (max-width: 61.9275em) {
+  #goals-and-mission .container #goal-quote {
+    padding: 10px 20px;
+  }
+}
+@media (min-width: 61.9375em) and (max-width: 74.99em) {
+  #goals-and-mission .container #goal-quote {
+    padding: 40px 0px;
+  }
+}
+@media (min-width: 75em) and (max-width: 87.49em) {
+  #goals-and-mission .container #goal-quote {
+    padding: 40px 0px;
+  }
+}
+@media (min-width: 87.5em) {
+  #goals-and-mission .container #goal-quote {
+    padding: 40px 0px;
+  }
+}
+@media (max-width: 35.99em) {
+  #goals-and-mission .container #goal-quote {
+    width: 100%;
+  }
+}
+@media (min-width: 36em) and (max-width: 47.99em) {
+  #goals-and-mission .container #goal-quote {
+    width: 100%;
+  }
+}
+@media (min-width: 48em) and (max-width: 61.9275em) {
+  #goals-and-mission .container #goal-quote {
+    width: 100%;
+  }
+}
+@media (min-width: 61.9375em) and (max-width: 74.99em) {
+  #goals-and-mission .container #goal-quote {
+    width: 60%;
+  }
+}
+@media (min-width: 75em) and (max-width: 87.49em) {
+  #goals-and-mission .container #goal-quote {
+    width: 50%;
+  }
+}
+@media (min-width: 87.5em) {
+  #goals-and-mission .container #goal-quote {
+    width: 50%;
+  }
+}
+@media (max-width: 35.99em) {
+  #goals-and-mission .container #goal-quote {
+    margin: 0;
+  }
+}
+@media (min-width: 36em) and (max-width: 47.99em) {
+  #goals-and-mission .container #goal-quote {
+    margin: 0;
+  }
+}
+@media (min-width: 48em) and (max-width: 61.9275em) {
+  #goals-and-mission .container #goal-quote {
+    margin: 0;
+  }
+}
+@media (min-width: 61.9375em) and (max-width: 74.99em) {
+  #goals-and-mission .container #goal-quote {
+    margin: -15% 0 0 5%;
+  }
+}
+@media (min-width: 75em) and (max-width: 87.49em) {
+  #goals-and-mission .container #goal-quote {
+    margin: -15% 0 0 5%;
+  }
+}
+@media (min-width: 87.5em) {
+  #goals-and-mission .container #goal-quote {
+    margin: -15% 0 0 5%;
+  }
+}
+@media (max-width: 35.99em) {
+  #goals-and-mission .container #goal-quote h2 {
+    font-size: 40px;
+  }
+}
+@media (min-width: 36em) and (max-width: 47.99em) {
+  #goals-and-mission .container #goal-quote h2 {
+    font-size: 44px;
+  }
+}
+@media (min-width: 48em) and (max-width: 61.9275em) {
+  #goals-and-mission .container #goal-quote h2 {
+    font-size: 60px;
+  }
+}
+@media (min-width: 61.9375em) and (max-width: 74.99em) {
+  #goals-and-mission .container #goal-quote h2 {
+    font-size: 73px;
+  }
+}
+@media (min-width: 75em) and (max-width: 87.49em) {
+  #goals-and-mission .container #goal-quote h2 {
+    font-size: 73px;
+  }
+}
+@media (min-width: 87.5em) {
+  #goals-and-mission .container #goal-quote h2 {
+    font-size: 73px;
+  }
+}

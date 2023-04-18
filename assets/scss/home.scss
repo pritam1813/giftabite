@@ -1,6 +1,5 @@
 @use 'mixins/main' as main;
 @use 'variables/colors' as *;
-@use 'partials/custom_elements' as ce;
 
 /*### HOMEPAGE STYLE ####*/
 
@@ -281,8 +280,6 @@
             }
 
             button{
-                @include ce.black-btn;
-                @include main.responsive-padding(15px 30px, 20px 30px, 20px 30px, 20px 30px);
                 &:hover{
                     border: 2px solid $tertiary-color;
                 } 

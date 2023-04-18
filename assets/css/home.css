@@ -51,75 +51,6 @@ body:before {
 /* WIDTH AND HEIGHT */
 /* PADDINGS AND MARGINS */
 /* FONTS */
-/* BUTTON DESIGNS */
-@media (max-width: 35.99em) {
-  .minimal-btn-responsiveness, .common-btn-properties, #newsletter-section #newsletter-form form button {
-    padding: 15px 30px;
-  }
-}
-@media (min-width: 36em) and (max-width: 47.99em) {
-  .minimal-btn-responsiveness, .common-btn-properties, #newsletter-section #newsletter-form form button {
-    padding: 20px 40px;
-  }
-}
-@media (min-width: 48em) and (max-width: 61.9275em) {
-  .minimal-btn-responsiveness, .common-btn-properties, #newsletter-section #newsletter-form form button {
-    padding: 20px 40px;
-  }
-}
-@media (min-width: 61.9375em) and (max-width: 74.99em) {
-  .minimal-btn-responsiveness, .common-btn-properties, #newsletter-section #newsletter-form form button {
-    padding: 20px 40px;
-  }
-}
-@media (min-width: 75em) and (max-width: 87.49em) {
-  .minimal-btn-responsiveness, .common-btn-properties, #newsletter-section #newsletter-form form button {
-    padding: 20px 40px;
-  }
-}
-@media (min-width: 87.5em) {
-  .minimal-btn-responsiveness, .common-btn-properties, #newsletter-section #newsletter-form form button {
-    padding: 20px 40px;
-  }
-}
-@media (max-width: 35.99em) {
-  .minimal-btn-responsiveness, .common-btn-properties, #newsletter-section #newsletter-form form button {
-    font-size: 16px;
-  }
-}
-@media (min-width: 36em) and (max-width: 47.99em) {
-  .minimal-btn-responsiveness, .common-btn-properties, #newsletter-section #newsletter-form form button {
-    font-size: 18px;
-  }
-}
-@media (min-width: 48em) and (max-width: 61.9275em) {
-  .minimal-btn-responsiveness, .common-btn-properties, #newsletter-section #newsletter-form form button {
-    font-size: 18px;
-  }
-}
-@media (min-width: 61.9375em) and (max-width: 74.99em) {
-  .minimal-btn-responsiveness, .common-btn-properties, #newsletter-section #newsletter-form form button {
-    font-size: 18px;
-  }
-}
-@media (min-width: 75em) and (max-width: 87.49em) {
-  .minimal-btn-responsiveness, .common-btn-properties, #newsletter-section #newsletter-form form button {
-    font-size: 18px;
-  }
-}
-@media (min-width: 87.5em) {
-  .minimal-btn-responsiveness, .common-btn-properties, #newsletter-section #newsletter-form form button {
-    font-size: 18px;
-  }
-}
-
-.common-btn-properties, #newsletter-section #newsletter-form form button {
-  border: none;
-  box-shadow: 0 0 0 0;
-  font-weight: 500;
-  text-transform: uppercase;
-}
-
 /*### HOMEPAGE STYLE ####*/
 /* TOP BANNER DESIGN*/
 #main-Banner #banner-container {
@@ -594,44 +525,6 @@ body:before {
   font-size: 18px;
   font-weight: 400;
   color: #727272;
-}
-#newsletter-section #newsletter-form form button {
-  background-color: #2e4049;
-  color: white;
-}
-#newsletter-section #newsletter-form form button:hover {
-  background-color: white;
-  color: #2e4049;
-}
-@media (max-width: 35.99em) {
-  #newsletter-section #newsletter-form form button {
-    padding: 15px 30px;
-  }
-}
-@media (min-width: 36em) and (max-width: 47.99em) {
-  #newsletter-section #newsletter-form form button {
-    padding: 20px 30px;
-  }
-}
-@media (min-width: 48em) and (max-width: 61.9275em) {
-  #newsletter-section #newsletter-form form button {
-    padding: 20px 30px;
-  }
-}
-@media (min-width: 61.9375em) and (max-width: 74.99em) {
-  #newsletter-section #newsletter-form form button {
-    padding: 20px 30px;
-  }
-}
-@media (min-width: 75em) and (max-width: 87.49em) {
-  #newsletter-section #newsletter-form form button {
-    padding: 20px 30px;
-  }
-}
-@media (min-width: 87.5em) {
-  #newsletter-section #newsletter-form form button {
-    padding: 20px 30px;
-  }
 }
 #newsletter-section #newsletter-form form button:hover {
   border: 2px solid #2e4049;

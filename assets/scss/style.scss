@@ -2,27 +2,33 @@
 @use 'mixins/main' as main;
 @use 'partials/custom_elements' as ce;
 
-body{
-    .row{
+body {
+    .row {
         margin: 0%;
     }
+
     font-size: 20px;
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Work Sans',
+    sans-serif;
 }
 
 
 /*## CUSTOM CLASSES ##*/
 
 //FONTS STYLING
-.red-font{
+.white-font{
+    color: white;
+}
+
+.red-font {
     color: $secondary-color;
 }
 
-.dark-font{
+.dark-font {
     color: $tertiary-color;
 }
 
-.grey-font{
+.grey-font {
     color: $home-color2;
 }
 
@@ -50,18 +56,18 @@ body{
 
 
 //CUSTOM BUTTON CLASSES
-.red-button-green-hover{
+.red-button-green-hover {
     @include ce.red-button;
 }
 
-.white-button-green-hover{
+.white-button-green-hover {
     @include ce.white-button($primary-color);
 }
 
-.white-button-black-hover{
+.white-button-black-hover {
     @include ce.white-button($tertiary-color);
 }
 
-.black-button-white-hover{
+.black-button-white-hover {
     @include ce.black-btn;
 }

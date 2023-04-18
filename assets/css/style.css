@@ -129,6 +129,10 @@ body .row {
 }
 
 /*## CUSTOM CLASSES ##*/
+.white-font {
+  color: white;
+}
+
 .red-font {
   color: #ff6d6d;
 }

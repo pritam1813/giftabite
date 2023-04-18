@@ -1,5 +1,56 @@
 extends layout.pug
 
+append css
+    link(rel="stylesheet" href="css/aboutus.css")
+
 block content
-    .d-flex.justify-content-center
-        h1 About Us
+    //-About Us Banner
+    section#about-us-Banner
+        .d-flex#banner-container
+            .container.d-flex.align-items-center#banner-flex
+                #banner-title-wrap
+                    p.mb-0.sub-title-font What We Do...
+                    h1 About our <br/> Organization
+    
+    //- GOAL AND MISSION
+    section#goals-and-mission
+        .container
+            .row.g-2.g-sm-5.text-center.text-lg-start
+                .col-12.col-lg-6#goals 
+                    h2.dark-font Our Goal
+                    p.para-font-style.grey-font To feed the needy and hungry with untouchable edible surplus food.
+                     | To sensitize people about the amount of food being wasted through standardized food waste auditing methods.
+                    .row.goal-list.g-3.justify-content-evenly.justify-content-lg-start
+                        .col-12.col-md-6.me-0.me-lg-3.p-3.rounded-pill
+                            i.fa-regular.fa-circle-check.red-font.me-2 
+                            | Food Loss Awarness
+                        .col-12.col-md-6.p-3.rounded-pill
+                            i.fa-regular.fa-circle-check.red-font.me-2 
+                            | Food Waste Audits
+                    .row.goal-list.g-3.justify-content-evenly.justify-content-lg-start
+                        .col-12.col-md-6.me-0.me-lg-3.p-3.rounded-pill
+                            i.fa-regular.fa-circle-check.red-font.me-2 
+                            | To Reduce Food Loss
+                        .col-12.col-md-6.p-3.rounded-pill
+                            i.fa-regular.fa-circle-check.red-font.me-2 
+                            | Surplus Food
+                    .row.goal-list.g-3.justify-content-evenly.justify-content-lg-start
+                        .col-12.p-3.rounded-pill
+                            i.fa-regular.fa-circle-check.red-font.me-2 
+                            | Protecting Malnourished Children
+                    p.mt-3.para-font-style.grey-font raise awareness about food loss and food waste amongst citizens and 
+                     | bring about behavioral change in them to prevent food waste at home, 
+                     | school or at workplace through guidance and sharing of good practices
+
+                .col-12.col-lg-6#mission
+                    .row#mission-title-wrap
+                        h2.dark-font Our Mission
+                        p.para-font-style.grey-font To raise awareness among Food businesses by encouraging 
+                         | them to adopt good practices to reduce food loss and food 
+                         | waste in their supply chains and sharing good practices
+                    .row#goal-and-image-wrap
+                        img.img-fluid(src="images/Our-mission-image.jpg", alt="Our Mission Image").pt-4.px-0
+                    .row#goal-quote 
+                        .col.text-center
+                            h2.sub-heading-font.p-0.m-0 20000+
+                            p.para-font-style.p-0.m-0 People Got Help

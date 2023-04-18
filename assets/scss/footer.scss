@@ -57,6 +57,13 @@ footer{
                 list-style: none;
 
                 li{
+                    a{
+                        text-decoration: none;
+                        color: white;
+                        &:hover{
+                            color: $secondary-color;
+                        }
+                    }
                     padding-top: 10px;
                 }
             }
