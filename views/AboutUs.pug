@@ -11,7 +11,30 @@ block content
                 #banner-title-wrap
                     p.mb-0.sub-title-font What We Do...
                     h1 About our <br/> Organization
-    
+
+    //- ABOUT US
+    section#about-us-description 
+        .container 
+            .row.text-center.mb-3.mb-md-5#about-title-wrap
+                p.sub-title-font.red-font About Us 
+                .col#quote
+                    sup.me-2 
+                        i.fa-solid.fa-quote-left 
+                    | Hunger is not a problem. It is an obscenity. 
+                    | How wonderful it is that nobody need wait a single
+                    | moment before starting to improve the world. – Anne Frank
+                    sup.me-2 
+                        i.fa-solid.fa-quote-right
+            .row.mt-2.text-center.text-md-start#descriptive-para 
+                p.para-font-style.grey-font
+                 | Giftabite aims to reduce food waste and provide access to food to 
+                 | those in need by redistributing excess food from events to the hungry.
+                 | <br/> <br/>
+                 | Started in Mumbai, the organization works with governments, corporations, partners, and volunteers 
+                 | to create local chapters addressing urban and environmental challenges in line with UN Sustainable Development Goals.
+                 | Food waste not only has economic and societal impacts but also puts undue pressure on natural resources 
+                 | and the environment, emitting about 8% of global greenhouse gases annually.
+
     //- GOAL AND MISSION
     section#goals-and-mission
         .container
@@ -54,3 +77,16 @@ block content
                         .col.text-center
                             h2.sub-heading-font.p-0.m-0 20000+
                             p.para-font-style.p-0.m-0 People Got Help
+
+    //- ABOUT US PAGE NEWSLETTER
+    section#aboutus-newsletter 
+            .container 
+                .row.text-center.justify-content-center#newsletter-title-warp
+                    .col-6 
+                        p.sub-title-font.white-font subscribe 
+                        h2.sub-heading-font.white-font newsletter
+                        p.para-font-style.white-font We aspire to be like helpers. So we serve all people. 
+                            | No matter their religion, ethnicity, or gender.
+                        form(action="/subsribe").d-block.d-md-flex
+                            input.form-control(type="email" placeholder="Enter Your Email").rounded-pill
+                            button.ms-md-3.mt-3.mt-md-0.btn(type="submit").black-button-white-hover.rounded-pill  send 
