@@ -9,15 +9,24 @@ footer
                     | All donations are tax-exempted as eligible under section 80G of the Income Tax Act, 1961.
                 .d-flex.justify-content-center.justify-content-xl-start#footer-social-flex
                     ul.list-group.list-group-horizontal
-                        each item in ['fa-brands fa-facebook', 'fa fa-instagram', 'fa fa-twitter', 'fa fa-pinterest' ]
+                        a(href="https://facebook.com")
+                            li.list-group-item.rounded-circle  
+                                i.fa-brands.fa-facebook
+                        a(href="https://instagram.com")
                             li.list-group-item.rounded-circle
-                                i(class=item)
+                                 i.fa.fa-instagram
+                        a(href="https://twitter.com")
+                            li.list-group-item.rounded-circle
+                                i.fa.fa-twitter 
+                        a(href="https://pinterest.com")        
+                            li.list-group-item.rounded-circle
+                                i.fa.fa-pinterest 
                     
             .col-12.col-sm-12.col-lg-9#footer-widget
                 .container 
-                    .row 
-                        .col-sm-12.col-md-6.col-xl-4
-                            h3.footer-sub-heading-font Who are we
+                    .row.text-start 
+                        .col-sm-12.col-md-6.col-xl-4.mt-3.mt-lg-0
+                            h3.footer-sub-heading-font.mb-0 Who are we
                             ul 
                                 li 
                                  a(href="/about-us") About Us
@@ -25,19 +34,19 @@ footer
                                 li Our Causes 
                                 li Campaigns 
                                 li Team
-                        .col-sm-12.col-md-6.col-xl-4
-                            h3.footer-sub-heading-font Get Involved
+                        .col-sm-12.col-md-6.col-xl-4.mt-3.mt-lg-0
+                            h3.footer-sub-heading-font.mb-0 Get Involved
                             ul 
                                 li Donate 
                                 li Volunteer 
                                 li Request Food 
                                 li Blog
                                 li FAQs
-                        .col-sm-12.col-xl-4
-                            h3.footer-sub-heading-font Contact 
+                        .col-sm-12.col-xl-4.mt-3.mt-xl-0
+                            h3.footer-sub-heading-font.mb-0 Contact 
                             p.pt-3.footer-para-font 307, Rajhans, Rokhidia Lane , Mandpeshwar Rd, Borivali (west)
                             | Mumbai <br/> Maharashtra - 400092 <br/> INDIA
     .container-fluid.p-0#copyright-section-wrap
         .d-flex.justify-content-center
             - let currentyear = new Date().getFullYear();
-            h5.m-0 Copyright © Giftabyte | 2022-#{currentyear}
+            h5.m-0 Copyright &#169; Giftabyte | 2022-#{currentyear}
