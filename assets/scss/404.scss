@@ -1,0 +1,29 @@
+@use 'mixins/main' as main;
+@use 'variables/colors' as *;
+
+#error-banner{
+    
+    #error-banner-container{
+        background: url('../images/404.jpg') center/cover no-repeat;
+        width: 100%;
+        //Responsive Height
+        @include main.responsive-height(420px, 560px, 600px, 822px);
+    }
+
+    h1{
+        line-height: 1.1;
+        @include main.responsive-fontsize(60px, 100px, 150px, 200px);
+    }
+
+    h2{
+        line-height: 1.2;
+        @include main.responsive-fontsize(35px, 38px, 50px, 70px, 90px);
+    }
+
+    p{
+        width: 81%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        line-height: 1.4;
+    }
+}

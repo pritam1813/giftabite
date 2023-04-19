@@ -1,0 +1,15 @@
+extends layout.pug
+
+append css
+    link(rel="stylesheet" href="css/404.css")
+
+block content
+    section#error-banner 
+        .d-flex#error-banner-container
+            .container.d-flex.align-items-center#banner-flex
+                #banner-title-wrap
+                    h1.mb-0.sub-title-font.red-font 404
+                    h2.white-font Page Not Found
+                    p.para-font-style.white-font The page you are looking for doesn't exist. 
+                     | Please try searching for some other page, 
+                     | or return to the website's homepage to find what you're looking for.

@@ -13,4 +13,10 @@ router.get('/about-us', (req, res) => {
     });
 });
 
+
+//For undefined Routes/404 error (KEEPING IT AT THE END OF ALL ROUTES)
+router.use((req, res, next) => {
+    res.status(404).render('404', { title: "404 Error"});
+});
+
 module.exports = router;
