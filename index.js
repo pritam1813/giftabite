@@ -13,6 +13,9 @@ app.use(sassMiddleware({
     prefix:  '/css'  
 }));
 
+//Using middleware express.urlencoded() for POST requests
+app.use(express.urlencoded({extended:false}));
+
 app.use(express.static('assets'));                      //Mentioning Path for using the static assets by the app
 
 app.set('view engine', 'pug');                          // Setting default View Engine(required to render html)

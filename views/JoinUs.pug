@@ -23,11 +23,11 @@ block content
                                 button#pills-profile-tab.nav-link(data-bs-toggle='pill' data-bs-target='#pills-profile' type='button' role='tab' aria-controls='pills-profile' aria-selected='false') Login
                         #pills-tabContent.tab-content
                             #pills-home.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='pills-home-tab' tabindex='0')
-                                form#signup-form(action='/signup' method='post' novalidate='')
+                                form#signup-form(action='/join-us/signup' method='post' novalidate='')
                                     .mb-3
                                         input#Name.form-control(type='text' placeholder='Full Name' required='' data-parsley-trigger='change' data-parsley-required-message='Please enter your full name')
                                     .mb-3
-                                        input#email.form-control(type='email' placeholder='Email Address' required='' data-parsley-trigger='change' data-parsley-type-message='Please enter a valid email address' data-parsley-required-message='Please enter your email address')
+                                        input#email.form-control(type='email' name='email' placeholder='Email Address' required='' data-parsley-trigger='change' data-parsley-type-message='Please enter a valid email address' data-parsley-required-message='Please enter your email address')
                                     .mb-3
                                         input#password.form-control(type='password' placeholder='Password' required='' data-parsley-trigger='change' data-parsley-required-message='Please Enter a Password' data-parsley-pattern-message='<div><h6>The Password Must Have: </h6><ul><li>Atleast one Uppercase Letter</li><li>Atleast one Lowercase Letter</li><li>Atleast one digit</li><li>A Special Character</li><li>Minimum length 8</li></ul></div>' data-parsley-pattern='^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$')
                                     .mb-3
@@ -56,7 +56,6 @@ block content
                                         input#remember-me.form-check-input(type='checkbox')
                                         label.form-check-label.grey-font(for='remember-me') Remember Me
                                     button.btn.black-button-white-hover.rounded-pill(type='submit') Login
-
 
 append scripts
     script(src="js/parsley.js") 

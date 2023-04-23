@@ -13,11 +13,7 @@ router.get('/about-us', (req, res) => {
     });
 });
 
-router.get('/join-us', (req, res) => {
-    return res.render('JoinUs',{
-        title: "Giftabite | Join Us"
-    });
-});
+router.use('/join-us', require('./users'));
 
 //For undefined Routes/404 error (KEEPING IT AT THE END OF ALL ROUTES)
 router.use((req, res, next) => {

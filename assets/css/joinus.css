@@ -303,10 +303,6 @@ body:before {
   outline: none;
   box-shadow: none;
 }
-#registration-login-form-section .container form select option[data-checked] {
-  background-color: #198754;
-  color: #fff;
-}
 #registration-login-form-section .container form .form-check-input:checked {
   background-color: #2e4049;
   border: none;
