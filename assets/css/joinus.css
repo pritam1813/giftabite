@@ -1,0 +1,316 @@
+@charset "UTF-8";
+body:before {
+  background-color: #fcf8e3;
+  border-bottom: 1px solid #fbeed5;
+  border-left: 1px solid #fbeed5;
+  color: #c09853;
+  font: small-caption;
+  padding: 3px 6px;
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 100;
+}
+@media (min-width: 0em) {
+  body:before {
+    content: "xs ≥ 0px (0em)";
+  }
+}
+@media (min-width: 36em) {
+  body:before {
+    content: "mobile ≥ 576px (36em)";
+  }
+}
+@media (min-width: 48em) {
+  body:before {
+    content: "tablet ≥ 768px (48em)";
+  }
+}
+@media (min-width: 61.9375em) {
+  body:before {
+    content: "desktop ≥ 991px (61.9375em)";
+  }
+}
+@media (min-width: 75em) {
+  body:before {
+    content: "wide ≥ 1200px (75em)";
+  }
+}
+@media (min-width: 87.5em) {
+  body:before {
+    content: "xxl ≥ 1400px (87.5em)";
+  }
+}
+
+/* MAIN COLORS */
+/* HEADER COLORS */
+/*Navbar Colors*/
+/*Homepage Colors*/
+/* Footer Colors */
+/* WIDTH AND HEIGHT */
+/* PADDINGS AND MARGINS */
+/* FONTS */
+#joinus-banner-container {
+  background: url("../images/JoinUs_Banner.jpg") center/cover no-repeat;
+  width: 100%;
+}
+@media (max-width: 35.99em) {
+  #joinus-banner-container {
+    height: 420px;
+  }
+}
+@media (min-width: 36em) and (max-width: 47.99em) {
+  #joinus-banner-container {
+    height: 560px;
+  }
+}
+@media (min-width: 48em) and (max-width: 61.9275em) {
+  #joinus-banner-container {
+    height: 600px;
+  }
+}
+@media (min-width: 61.9375em) and (max-width: 74.99em) {
+  #joinus-banner-container {
+    height: 822px;
+  }
+}
+@media (min-width: 75em) and (max-width: 87.49em) {
+  #joinus-banner-container {
+    height: 822px;
+  }
+}
+@media (min-width: 87.5em) {
+  #joinus-banner-container {
+    height: 822px;
+  }
+}
+#joinus-banner-container p {
+  font-weight: 400;
+}
+@media (max-width: 35.99em) {
+  #joinus-banner-container p {
+    font-size: 35px;
+  }
+}
+@media (min-width: 36em) and (max-width: 47.99em) {
+  #joinus-banner-container p {
+    font-size: 36px;
+  }
+}
+@media (min-width: 48em) and (max-width: 61.9275em) {
+  #joinus-banner-container p {
+    font-size: 40px;
+  }
+}
+@media (min-width: 61.9375em) and (max-width: 74.99em) {
+  #joinus-banner-container p {
+    font-size: 50px;
+  }
+}
+@media (min-width: 75em) and (max-width: 87.49em) {
+  #joinus-banner-container p {
+    font-size: 50px;
+  }
+}
+@media (min-width: 87.5em) {
+  #joinus-banner-container p {
+    font-size: 50px;
+  }
+}
+@media (max-width: 35.99em) {
+  #joinus-banner-container h1 {
+    font-size: 35px;
+  }
+}
+@media (min-width: 36em) and (max-width: 47.99em) {
+  #joinus-banner-container h1 {
+    font-size: 38px;
+  }
+}
+@media (min-width: 48em) and (max-width: 61.9275em) {
+  #joinus-banner-container h1 {
+    font-size: 50px;
+  }
+}
+@media (min-width: 61.9375em) and (max-width: 74.99em) {
+  #joinus-banner-container h1 {
+    font-size: 65px;
+  }
+}
+@media (min-width: 75em) and (max-width: 87.49em) {
+  #joinus-banner-container h1 {
+    font-size: 80px;
+  }
+}
+@media (min-width: 87.5em) {
+  #joinus-banner-container h1 {
+    font-size: 80px;
+  }
+}
+
+@media (max-width: 35.99em) {
+  #registration-login-form-section {
+    margin: auto;
+  }
+}
+@media (min-width: 36em) and (max-width: 47.99em) {
+  #registration-login-form-section {
+    margin: auto;
+  }
+}
+@media (min-width: 48em) and (max-width: 61.9275em) {
+  #registration-login-form-section {
+    margin: -10% auto auto;
+  }
+}
+@media (min-width: 61.9375em) and (max-width: 74.99em) {
+  #registration-login-form-section {
+    margin: -10% auto auto;
+  }
+}
+@media (min-width: 75em) and (max-width: 87.49em) {
+  #registration-login-form-section {
+    margin: -10% auto auto;
+  }
+}
+@media (min-width: 87.5em) {
+  #registration-login-form-section {
+    margin: -10% auto auto;
+  }
+}
+@media (max-width: 35.99em) {
+  #registration-login-form-section {
+    width: 90%;
+  }
+}
+@media (min-width: 36em) and (max-width: 47.99em) {
+  #registration-login-form-section {
+    width: 90%;
+  }
+}
+@media (min-width: 48em) and (max-width: 61.9275em) {
+  #registration-login-form-section {
+    width: 100%;
+  }
+}
+@media (min-width: 61.9375em) and (max-width: 74.99em) {
+  #registration-login-form-section {
+    width: 100%;
+  }
+}
+@media (min-width: 75em) and (max-width: 87.49em) {
+  #registration-login-form-section {
+    width: 100%;
+  }
+}
+@media (min-width: 87.5em) {
+  #registration-login-form-section {
+    width: 100%;
+  }
+}
+@media (max-width: 35.99em) {
+  #registration-login-form-section {
+    padding: 0;
+  }
+}
+@media (min-width: 36em) and (max-width: 47.99em) {
+  #registration-login-form-section {
+    padding: 0 0 50px;
+  }
+}
+@media (min-width: 48em) and (max-width: 61.9275em) {
+  #registration-login-form-section {
+    padding: 0 0 80px;
+  }
+}
+@media (min-width: 61.9375em) and (max-width: 74.99em) {
+  #registration-login-form-section {
+    padding: 0 0 100px;
+  }
+}
+@media (min-width: 75em) and (max-width: 87.49em) {
+  #registration-login-form-section {
+    padding: 0 0 120px;
+  }
+}
+@media (min-width: 87.5em) {
+  #registration-login-form-section {
+    padding: 0 0 120px;
+  }
+}
+#registration-login-form-section .container {
+  background-color: #f1eeec;
+}
+@media (max-width: 35.99em) {
+  #registration-login-form-section .container {
+    padding: 12% 0;
+  }
+}
+@media (min-width: 36em) and (max-width: 47.99em) {
+  #registration-login-form-section .container {
+    padding: 15% 0;
+  }
+}
+@media (min-width: 48em) and (max-width: 61.9275em) {
+  #registration-login-form-section .container {
+    padding: 10% 0;
+  }
+}
+@media (min-width: 61.9375em) and (max-width: 74.99em) {
+  #registration-login-form-section .container {
+    padding: 5% 0;
+  }
+}
+@media (min-width: 75em) and (max-width: 87.49em) {
+  #registration-login-form-section .container {
+    padding: 5% 0;
+  }
+}
+@media (min-width: 87.5em) {
+  #registration-login-form-section .container {
+    padding: 5% 0;
+  }
+}
+#registration-login-form-section .container .nav-tabs .nav-item {
+  border: none;
+  padding: 0;
+}
+#registration-login-form-section .container .nav-tabs .nav-item .nav-link {
+  border: 0;
+  color: #2e4049;
+}
+#registration-login-form-section .container .nav-tabs .nav-item .nav-link.active {
+  background-color: #77d7d3;
+}
+#registration-login-form-section .container form .btn {
+  border: 2px solid #2e4049;
+}
+#registration-login-form-section .container form .form-check-input {
+  padding: 0;
+}
+#registration-login-form-section .container form input,
+#registration-login-form-section .container form select {
+  padding: 9px 15px;
+  border-radius: 0%;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+#registration-login-form-section .container form input:focus,
+#registration-login-form-section .container form select:focus {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+#registration-login-form-section .container form select option[data-checked] {
+  background-color: #198754;
+  color: #fff;
+}
+#registration-login-form-section .container form .form-check-input:checked {
+  background-color: #2e4049;
+  border: none;
+}
+#registration-login-form-section .container form .invalid-feedback {
+  display: none !important;
+}

@@ -1,0 +1,63 @@
+extends layout.pug
+
+append css
+    link(rel="stylesheet" href="css/joinus.css")  
+
+block content
+    section#joinus-banner 
+        .d-flex#joinus-banner-container
+            .container.d-flex.align-items-center#banner-flex
+                #banner-title-wrap
+                    p.mb-0.sub-title-font.white-font Join Us
+                    h1.sub-heading-font.white-font Registration / Login
+
+    section#registration-login-form-section
+        .container
+            .row.justify-content-center
+                .col-11.col-sm-9.col-md-7.col-lg-5.col-xl-4
+                    #registration-login-form
+                        #pills-tab.nav.nav-tabs.mb-3(role='tablist') 
+                            span.nav-item(role='presentation')
+                                button#pills-home-tab.nav-link.active(data-bs-toggle='pill' data-bs-target='#pills-home' type='button' role='tab' aria-controls='pills-home' aria-selected='true') Sign Up
+                            span.nav-item(role='presentation')
+                                button#pills-profile-tab.nav-link(data-bs-toggle='pill' data-bs-target='#pills-profile' type='button' role='tab' aria-controls='pills-profile' aria-selected='false') Login
+                        #pills-tabContent.tab-content
+                            #pills-home.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='pills-home-tab' tabindex='0')
+                                form#signup-form(action='/signup' method='post' novalidate='')
+                                    .mb-3
+                                        input#Name.form-control(type='text' placeholder='Full Name' required='' data-parsley-trigger='change' data-parsley-required-message='Please enter your full name')
+                                    .mb-3
+                                        input#email.form-control(type='email' placeholder='Email Address' required='' data-parsley-trigger='change' data-parsley-type-message='Please enter a valid email address' data-parsley-required-message='Please enter your email address')
+                                    .mb-3
+                                        input#password.form-control(type='password' placeholder='Password' required='' data-parsley-trigger='change' data-parsley-required-message='Please Enter a Password' data-parsley-pattern-message='<div><h6>The Password Must Have: </h6><ul><li>Atleast one Uppercase Letter</li><li>Atleast one Lowercase Letter</li><li>Atleast one digit</li><li>A Special Character</li><li>Minimum length 8</li></ul></div>' data-parsley-pattern='^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$')
+                                    .mb-3
+                                        input#confirm-password.form-control(type='password' placeholder='Confirm Password' required='' data-parsley-trigger='change' data-parsley-required-message='Please confirm your password' data-parsley-equalto-message='Passwords do not match' data-parsley-equalto='#password')
+                                    .mb-3
+                                        input#phone-number.form-control(type='tel' placeholder='Enter phone number' required='' data-parsley-trigger='change' data-parsley-required-message='Please enter your phone number' data-parsley-pattern-message='Please enter a valid 10 digit phone number without spaces' data-parsley-pattern='^\\d{10}$')
+                                    .mb-3
+                                        select#register-as-label.grey-font.form-control.form-select(name='register-as' aria-label='Select option for Registration' required='' data-parsley-trigger='change' data-parsley-required-message='Please select an option')
+                                            option(selected='' disabled='') Register As
+                                            option(value='NGO') NGO
+                                            option(value='Volunteer') Volunteer
+                                            option(value='Restaurant') Restaurant
+                                            option(value='Donor') Individual Donor
+                                    .mb-3.form-check
+                                        input#accept-terms.form-check-input(type='checkbox' required='' data-parsley-trigger='change' data-parsley-required-message='You must accept the terms and conditions to register')
+                                        label.form-check-label.grey-font(for='accept-terms') I Have Read the Terms and Conditions
+                                    button.btn.black-button-white-hover.rounded-pill(type='submit') Submit
+                                    
+                            #pills-profile.tab-pane.fade(role='tabpanel' aria-labelledby='pills-profile-tab' tabindex='0')
+                                form#login-form(action='/login' method='post' novalidate='')
+                                    .mb-3
+                                        input#user-email.form-control(type='email' placeholder='Email Address' required='' data-parsley-trigger='change' data-parsley-type-message='Please enter a valid email address' data-parsley-required-message='Please enter your email address')
+                                    .mb-3 
+                                        input#user-password.form-control(type='password' placeholder='Password' required='' data-parsley-trigger='change' data-parsley-required-message='Please Enter your Password')
+                                    .mb-3.form-check
+                                        input#remember-me.form-check-input(type='checkbox')
+                                        label.form-check-label.grey-font(for='remember-me') Remember Me
+                                    button.btn.black-button-white-hover.rounded-pill(type='submit') Login
+
+
+append scripts
+    script(src="js/parsley.js") 
+    script(src="js/joinus.js") 

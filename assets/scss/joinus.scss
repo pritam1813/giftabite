@@ -1,0 +1,78 @@
+@use 'mixins/main' as main;
+@use 'variables/colors' as *;
+
+#joinus-banner-container {
+    background: url('../images/JoinUs_Banner.jpg') center/cover no-repeat;
+    width: 100%;
+    //Responsive Height
+    @include main.responsive-height(420px, 560px, 600px, 822px);
+
+    p {
+        font-weight: 400;
+        @include main.responsive-fontsize(35px, 36px, 40px, 50px);
+    }
+
+    h1 {
+        @include main.responsive-fontsize(35px, 38px, 50px, 65px, 80px);
+    }
+}
+
+#registration-login-form-section {
+    @include main.responsive-margin(auto, auto, -10% auto auto);
+    @include main.responsive-width(90%, 90%, 100%);
+    @include main.responsive-padding(0, 0 0 50px, 0 0 80px, 0 0 100px, 0 0 120px);
+
+    .container {
+        background-color: $home-color4;
+        @include main.responsive-padding(12% 0, 15% 0, 10% 0, 5% 0);
+
+        .nav-tabs{
+            .nav-item{
+                border: none;
+                padding: 0;
+
+                .nav-link{
+                    border: 0;
+                    color: $tertiary-color;
+                }
+                .nav-link.active{
+                    background-color: $primary-color;
+                }
+            }
+        }
+
+        form {
+            .btn{
+                border: 2px solid $tertiary-color;
+            }
+
+            .form-check-input{
+                padding: 0;
+            }
+
+            input,
+            select {
+                padding: 9px 15px;
+                border-radius: 0%;
+                border: none;
+                outline: none;
+                box-shadow: none;
+                &:focus {
+                    border: none;
+                    outline: none;
+                    box-shadow: none;
+                }
+
+            }
+
+            .form-check-input:checked{
+                background-color: $tertiary-color;
+                border: none;
+            }
+
+            .invalid-feedback{
+                display: none !important;
+            }
+        }
+    }
+}

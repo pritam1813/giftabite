@@ -25,8 +25,11 @@ To run the Food Donation Website, you need to follow these steps:
 5. Start the server by running the command **`npm start`**.
 6. Open the website in your browser by navigating to http://localhost:3000.
 
-## Contributors
-* [Pritam Dhara](https://github.com/pritam1813)
+## Team
+* ## Project Guide
+    * [Munmun Bhattacharya](http://www.jaduniv.edu.in/profile.php?uid=1058)
+* ## Developer
+    * [Pritam Dhara](https://github.com/pritam1813)
 
 ## License
 This project is licensed under the [MIT License](https://github.com/pritam1813/giftabite/blob/main/LICENSE).
