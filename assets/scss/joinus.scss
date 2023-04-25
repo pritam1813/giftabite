@@ -1,5 +1,5 @@
-@use 'mixins/main' as main;
-@use 'variables/colors' as *;
+@use './mixins/main' as main;
+@use './variables/colors' as *;
 
 #joinus-banner-container {
     background: url('../images/JoinUs_Banner.jpg') center/cover no-repeat;

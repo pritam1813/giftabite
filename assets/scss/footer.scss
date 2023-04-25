@@ -1,5 +1,6 @@
-@use 'mixins/main' as main;
-@use 'variables/colors' as *;
+@use './mixins/main' as main;
+@use './variables/colors' as *;
+@use './partials/fonts' as *;
 
 /*## CUSTOM CLASSES ##*/
 .footer-sub-heading-font {

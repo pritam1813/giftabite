@@ -120,6 +120,25 @@ body:before {
   text-transform: uppercase;
 }
 
+/* shippori-mincho-regular - latin */
+@font-face {
+  font-display: swap;
+  /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Shippori Mincho";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/shippori-mincho-v14-latin/shippori-mincho-v14-latin-regular.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/shippori-mincho-v14-latin/shippori-mincho-v14-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/shippori-mincho-v14-latin/shippori-mincho-v14-latin-regular.woff2") format("woff2"), url("../fonts/shippori-mincho-v14-latin/shippori-mincho-v14-latin-regular.woff") format("woff"), url("../fonts/shippori-mincho-v14-latin/shippori-mincho-v14-latin-regular.ttf") format("truetype");
+}
+/* sue-ellen-francisco-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Sue Ellen Francisco";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/sue-ellen-francisco-v16-latin/sue-ellen-francisco-v16-latin-regular.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/sue-ellen-francisco-v16-latin/sue-ellen-francisco-v16-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/sue-ellen-francisco-v16-latin/sue-ellen-francisco-v16-latin-regular.woff2") format("woff2"), url("../fonts/sue-ellen-francisco-v16-latin/sue-ellen-francisco-v16-latin-regular.woff") format("woff"), url("../fonts/sue-ellen-francisco-v16-latin/sue-ellen-francisco-v16-latin-regular.ttf") format("truetype");
+}
 body {
   font-size: 20px;
   font-family: "Work Sans", sans-serif;

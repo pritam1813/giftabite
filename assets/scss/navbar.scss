@@ -1,6 +1,6 @@
-@use 'mixins/main' as main;
+@use './mixins/main' as main;
 @use 'partials/custom_elements' as ce;
-@use 'variables/colors' as c;
+@use './variables/colors' as c;
 
 /*### NAVBAR STYLE ####*/
 //Controlling Navbar elements display on mobile and small tablets

@@ -1,6 +1,7 @@
-@use 'variables/colors' as *;
-@use 'mixins/main' as main;
-@use 'partials/custom_elements' as ce;
+@use './variables/colors' as *;
+@use './mixins/main' as main;
+@use './partials/custom_elements' as ce;
+@use './partials/fonts' as *;
 
 body {
     .row {
@@ -16,7 +17,7 @@ body {
 /*## CUSTOM CLASSES ##*/
 
 //FONTS STYLING
-.white-font{
+.white-font {
     color: white;
 }
 
