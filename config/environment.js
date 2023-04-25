@@ -4,14 +4,16 @@ require('dotenv').config();
 const development = {
     name: 'development',
     port: 3000,
-    asset_path: 'assets/'
+    asset_path: 'assets/',
+    mongodb_uri: 'mongodb://127.0.0.1:27017/giftabite'
 };
 
 //For Production build
 const production = {
     name: 'production',
     port: process.env.PORT,
-    asset_path: 'public/'
+    asset_path: 'public/',
+    mongodb_uri: process.env.MONGODB_URI
 };
 
 

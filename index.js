@@ -1,9 +1,10 @@
 const env = require('./config/environment');            //Config file to set the environment either as production or development
 const express = require('express');                     //Importing Express Module for creating APP
 const sassMiddleware = require('express-dart-sass');    //Middleware for compiling scss
-const app = express(); 
+const app = express();                                  //Creating Express app
 require('./config/view_helper')(app);                   //For appending dynimic asset path to the views                                 //Creating the app
-const path = require('path');
+const path = require('path');                           //Module For referencing to path
+const db = require('./config/mongoose');                //Importing the Database
 
 if (env.name === 'development') {
     //Syntax for using express dart sass
