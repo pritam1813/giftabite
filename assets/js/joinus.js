@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(function () {
   let signupForm = $('#signup-form').parsley({
     errorClass: 'is-invalid',
     successClass: 'is-valid',
@@ -56,9 +56,40 @@ $(document).ready(function () {
 });
 
 
+/*Signup and Login via AJAX*/
 
+//Display Response Text function
+function displayMessage(message) {
+  $('#response-message').append('<p>' + message + '</p>');
+  $('#pills-login-tab').tab('show');
+  setTimeout(function () {
+    $('#response-message').find('p').remove();
+  }, 10000);
+}
 
-
-
-
-
+$(function () {
+  $('#signup-form').on('submit', function (e) {
+    e.preventDefault(); // prevent the form from submitting normally
+    let formData = $(this).serialize(); // get the form data
+    $.ajax({
+      type: 'POST',
+      url: '/join-us/signup',
+      data: formData,
+      success: function (response) {
+        if (response.success) {
+          // show success message and switch to login tab
+          displayMessage(response.success);
+        } else if (response.error) {
+          // show error message and switch to login tab
+          displayMessage(response.error);
+        } else {
+          // if there's no error, just reload the page
+          location.reload();
+        }
+      },
+      error: function (jqXHR, textStatus, errorThrown) {
+        console.log('Error:', errorThrown);
+      }
+    });
+  })
+});

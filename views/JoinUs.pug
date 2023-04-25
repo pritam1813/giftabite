@@ -18,24 +18,25 @@ block content
                     #registration-login-form
                         #pills-tab.nav.nav-tabs.mb-3(role='tablist') 
                             span.nav-item(role='presentation')
-                                button#pills-home-tab.nav-link.active(data-bs-toggle='pill' data-bs-target='#pills-home' type='button' role='tab' aria-controls='pills-home' aria-selected='true') Sign Up
+                                button#pills-signup-tab.nav-link.active(data-bs-toggle='pill' data-bs-target='#pills-signup' type='button' role='tab' aria-controls='pills-signup' aria-selected='true') Sign Up
                             span.nav-item(role='presentation')
-                                button#pills-profile-tab.nav-link(data-bs-toggle='pill' data-bs-target='#pills-profile' type='button' role='tab' aria-controls='pills-profile' aria-selected='false') Login
+                                button#pills-login-tab.nav-link(data-bs-toggle='pill' data-bs-target='#pills-login' type='button' role='tab' aria-controls='pills-login' aria-selected='false') Login
                         #pills-tabContent.tab-content
-                            #pills-home.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='pills-home-tab' tabindex='0')
+                            #response-message
+                            #pills-signup.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='pills-signup-tab' tabindex='0')
                                 form#signup-form(action='/join-us/signup' method='post' novalidate='')
                                     .mb-3
-                                        input#Name.form-control(type='text' placeholder='Full Name' required='' data-parsley-trigger='change' data-parsley-required-message='Please enter your full name')
+                                        input#Name.form-control(name='name' type='text' placeholder='Full Name' required='' data-parsley-trigger='change' data-parsley-required-message='Please enter your full name')
                                     .mb-3
                                         input#email.form-control(type='email' name='email' placeholder='Email Address' required='' data-parsley-trigger='change' data-parsley-type-message='Please enter a valid email address' data-parsley-required-message='Please enter your email address')
                                     .mb-3
-                                        input#password.form-control(type='password' placeholder='Password' required='' data-parsley-trigger='change' data-parsley-required-message='Please Enter a Password' data-parsley-pattern-message='<div><h6>The Password Must Have: </h6><ul><li>Atleast one Uppercase Letter</li><li>Atleast one Lowercase Letter</li><li>Atleast one digit</li><li>A Special Character</li><li>Minimum length 8</li></ul></div>' data-parsley-pattern='^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$')
+                                        input#password.form-control(name='password' type='password' placeholder='Password' required='' data-parsley-trigger='change' data-parsley-required-message='Please Enter a Password' data-parsley-pattern-message='<div><h6>The Password Must Have: </h6><ul><li>Atleast one Uppercase Letter</li><li>Atleast one Lowercase Letter</li><li>Atleast one digit</li><li>A Special Character</li><li>Minimum length 8</li></ul></div>' data-parsley-pattern='^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$')
                                     .mb-3
-                                        input#confirm-password.form-control(type='password' placeholder='Confirm Password' required='' data-parsley-trigger='change' data-parsley-required-message='Please confirm your password' data-parsley-equalto-message='Passwords do not match' data-parsley-equalto='#password')
+                                        input#confirm-password.form-control(name='confirm_password' type='password' placeholder='Confirm Password' required='' data-parsley-trigger='change' data-parsley-required-message='Please confirm your password' data-parsley-equalto-message='Passwords do not match' data-parsley-equalto='#password')
                                     .mb-3
-                                        input#phone-number.form-control(type='tel' placeholder='Enter phone number' required='' data-parsley-trigger='change' data-parsley-required-message='Please enter your phone number' data-parsley-pattern-message='Please enter a valid 10 digit phone number without spaces' data-parsley-pattern='^\\d{10}$')
+                                        input#phone-number.form-control(name='phoneNumber' type='tel' placeholder='Enter phone number' required='' data-parsley-trigger='change' data-parsley-required-message='Please enter your phone number' data-parsley-pattern-message='Please enter a valid 10 digit phone number without spaces' data-parsley-pattern='^\\d{10}$')
                                     .mb-3
-                                        select#register-as-label.grey-font.form-control.form-select(name='register-as' aria-label='Select option for Registration' required='' data-parsley-trigger='change' data-parsley-required-message='Please select an option')
+                                        select#register-as-label.grey-font.form-control.form-select(name='registerAs' aria-label='Select option for Registration' required='' data-parsley-trigger='change' data-parsley-required-message='Please select an option')
                                             option(selected='' disabled='') Register As
                                             option(value='NGO') NGO
                                             option(value='Volunteer') Volunteer
@@ -44,14 +45,14 @@ block content
                                     .mb-3.form-check
                                         input#accept-terms.form-check-input(type='checkbox' required='' data-parsley-trigger='change' data-parsley-required-message='You must accept the terms and conditions to register')
                                         label.form-check-label.grey-font(for='accept-terms') I Have Read the Terms and Conditions
-                                    button.btn.black-button-white-hover.rounded-pill(type='submit') Submit
+                                    button.btn.black-button-white-hover.rounded-pill#signup-button(type='submit' ) Submit
                                     
-                            #pills-profile.tab-pane.fade(role='tabpanel' aria-labelledby='pills-profile-tab' tabindex='0')
+                            #pills-login.tab-pane.fade(role='tabpanel' aria-labelledby='pills-login-tab' tabindex='0')
                                 form#login-form(action='/login' method='post' novalidate='')
                                     .mb-3
-                                        input#user-email.form-control(type='email' placeholder='Email Address' required='' data-parsley-trigger='change' data-parsley-type-message='Please enter a valid email address' data-parsley-required-message='Please enter your email address')
+                                        input#user-email.form-control(name='email' type='email' placeholder='Email Address' required='' data-parsley-trigger='change' data-parsley-type-message='Please enter a valid email address' data-parsley-required-message='Please enter your email address')
                                     .mb-3 
-                                        input#user-password.form-control(type='password' placeholder='Password' required='' data-parsley-trigger='change' data-parsley-required-message='Please Enter your Password')
+                                        input#user-password.form-control(name='password' type='password' placeholder='Password' required='' data-parsley-trigger='change' data-parsley-required-message='Please Enter your Password')
                                     .mb-3.form-check
                                         input#remember-me.form-check-input(type='checkbox')
                                         label.form-check-label.grey-font(for='remember-me') Remember Me
