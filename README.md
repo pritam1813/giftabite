@@ -26,9 +26,9 @@ To run the Food Donation Website, you need to follow these steps:
 6. Open the website in your browser by navigating to http://localhost:3000.
 
 ## Team
-* ## Project Guide
+* #### Project Guide
     * [Munmun Bhattacharya](http://www.jaduniv.edu.in/profile.php?uid=1058)
-* ## Developer
+* #### Developer
     * [Pritam Dhara](https://github.com/pritam1813)
 
 ## License

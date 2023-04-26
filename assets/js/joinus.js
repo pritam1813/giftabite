@@ -61,7 +61,6 @@ $(function () {
 //Display Response Text function
 function displayMessage(message) {
   $('#response-message').append('<p>' + message + '</p>');
-  $('#pills-login-tab').tab('show');
   setTimeout(function () {
     $('#response-message').find('p').remove();
   }, 10000);
@@ -76,15 +75,23 @@ $(function () {
       url: '/join-us/signup',
       data: formData,
       success: function (response) {
-        if (response.success) {
-          // show success message and switch to login tab
-          displayMessage(response.success);
-        } else if (response.error) {
-          // show error message and switch to login tab
-          displayMessage(response.error);
-        } else {
-          // if there's no error, just reload the page
-          location.reload();
+        switch (response.type) {
+          case 'InvalidEmail':
+            displayMessage(response.error);
+            break;
+          case 'PasswordMismatch':
+            displayMessage(response.error);
+            break;
+          case 'SignupSuccess':
+            displayMessage(response.success);
+            $('#pills-login-tab').tab('show');
+            break;
+          case 'UserExist':
+            displayMessage(response.error);
+            $('#pills-login-tab').tab('show');
+            break;
+          default:
+            location.reload();
         }
       },
       error: function (jqXHR, textStatus, errorThrown) {
