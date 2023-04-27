@@ -34,4 +34,7 @@ nav.navbar.navbar-expand-md.navbar-light#main-navbar(role='banner')
                         a.dropdown-item(href='/blog') Blog
             li.nav-item
                 a.nav-link(href='/contact-us') Contact
-        a.btn.d-none.d-md-block.rounded-pill#nav-donate-button(href='/causes') Donate
+        if locals.user 
+            a.btn.d-none.d-md-block.rounded-pill#nav-donate-button(href='/join-us/logout') Logout
+        else
+            a.btn.d-none.d-md-block.rounded-pill#nav-donate-button(href='/join-us') Donate

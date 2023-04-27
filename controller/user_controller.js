@@ -66,3 +66,12 @@ module.exports.create_session = function(req, res){
 
     return res.redirect('/dashboard');
 };
+
+//Action for signing out a user and destroying the session
+module.exports.destroySession = function(req, res){
+    req.logout(function(err){           //Included function in passport js for destroying session
+        if(err){console.log(err)};
+
+        return res.redirect('/');
+    });               
+};
