@@ -3,6 +3,9 @@ const bcrypt = require('bcrypt');                               //Module to crea
 const validator = require('deep-email-validator');              //Module For Checking Valid Emails
 
 module.exports.joinus = (req, res) => {
+    if(req.isAuthenticated()){                  //isAuthenticated is inbuilt function to check Authentication 
+        return res.redirect('/dashboard');          //If user is alredy Authenticated then sign up page is not accessible
+    }
     return res.render('JoinUs', { title: 'Giftabite | Join Us' });
 }
 
@@ -44,4 +47,22 @@ module.exports.signup = async function (req, res) {
         console.log(`Error: ${err}`);
         return;
     }
+};
+
+module.exports.dashboard = async function(req, res){
+    try {
+        if(!req.isAuthenticated()){
+            //If User is not Authenticated then redirect him to Join Us page
+            return res.redirect('/join-us');
+        }
+        return res.render('Dashboard', {title: 'Dashboard'});
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+//Action for Logging in a user and creating a Session
+module.exports.create_session = function(req, res){
+
+    return res.redirect('/dashboard');
 };

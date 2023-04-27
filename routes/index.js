@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
+const userController = require('../controller/user_controller');
 
+router.use('/join-us', require('./users'));
 router.get('/', (req, res) => {
     return res.render('Home',{
         title: "Giftabite | Home"
@@ -13,7 +15,7 @@ router.get('/about-us', (req, res) => {
     });
 });
 
-router.use('/join-us', require('./users'));
+router.get('/dashboard', userController.dashboard);
 
 //For undefined Routes/404 error (KEEPING IT AT THE END OF ALL ROUTES)
 router.use((req, res, next) => {

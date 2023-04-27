@@ -1,0 +1,17 @@
+extends layout.pug
+
+append css
+    link(rel="stylesheet" href="css/joinus.css")  
+
+block content
+    section#dashboard-banner 
+        .d-flex#dashboard-banner-container
+            .container.d-flex.align-items-center#banner-flex
+                #banner-title-wrap
+                    p.mb-0.sub-title-font.white-font Join Us
+                    h1.sub-heading-font.white-font Registration / Login
+                        
+    section#registration-login-form-section
+        .container
+            .row.justify-content-center
+                .col-11.col-sm-9.col-md-7.col-lg-5.col-xl-4

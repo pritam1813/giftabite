@@ -1,5 +1,6 @@
 const env = require('./config/environment');            //Config file to set the environment either as production or development
 const express = require('express');                     //Importing Express Module for creating APP
+const cookieParser = require('cookie-parser');                                  //Importing cookie parser module for managing cookies 
 const sassMiddleware = require('express-dart-sass');    //Middleware for compiling scss
 const app = express();                                  //Creating Express app
 require('./config/view_helper')(app);                   //For appending dynimic asset path to the views
@@ -7,6 +8,8 @@ const path = require('path');                           //Module For referencing
 const db = require('./config/mongoose');                //Importing the Database
 const session = require('express-session');             //Library for creating Session and storing encrypted Session ID
 const MongoStore = require('connect-mongo');            //required fo storing the session cookie
+const passport = require('passport');                                           //Importing passport js library
+const passportLocal = require('./config/passport-local');                       //Passport local strategy from config folder
 
 if (env.name === 'development') {
     //Syntax for using express dart sass
@@ -22,6 +25,9 @@ if (env.name === 'development') {
 
 //Using middleware express.urlencoded() for POST requests
 app.use(express.urlencoded({ extended: false }));
+
+//Telling the app to use Cookie Parser
+app.use(cookieParser());
 
 //Mentioning Paths for using the static assets by the app
 app.use(express.static(env.asset_path));                 
@@ -47,6 +53,12 @@ app.use(session({
         mongoUrl: env.mongodb_uri       
     })
 }));
+
+app.use(passport.initialize());     //middle-ware that initialises Passport
+app.use(passport.session());        /* acts as a middleware to alter the req object and change the 'user' value that is currently 
+                                    the session id (from the client cookie) into the true deserialized user object.*/
+
+app.use(passport.setAuthentication);
 
 //Setting the App to use the routes folder to handle Different Routes
 app.use('/', require('./routes/index'));
