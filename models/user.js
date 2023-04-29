@@ -23,6 +23,12 @@ const userSchema = new mongoose.Schema({
         unique: true,
         match: /^\d{10}$/
     },
+    state: {
+        type: String
+    },
+    district: {
+        type: String
+    },
     registerAs: {
         type: String,
         enum: ['NGO', 'Volunteer', 'Restaurant', 'Donor']

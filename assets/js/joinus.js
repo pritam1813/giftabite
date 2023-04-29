@@ -75,6 +75,7 @@ $(function () {
       url: '/join-us/signup',
       data: formData,
       success: function (response) {
+        console.log(response);
         switch (response.type) {
           case 'InvalidEmail':
             displayMessage(response.error);
@@ -99,4 +100,43 @@ $(function () {
       }
     });
   })
+});
+
+// Implementing All States and District list using Geonames API
+$(function () {
+  // Fetching list of states from Geonames API using fetch
+  const getStates = async () => {
+    const response = await fetch('/api/geonames');
+    const data = await response.json();
+    return data;
+  };
+  
+  // Fetching list of cities in a given state from Geonames API using fetch
+  const getCities = async (stateGeonameId) => {
+    const response = await fetch(`/api/geonames?geonameId=${stateGeonameId}`);
+    const data = await response.json();
+    return data;
+  };
+
+  // Populating state dropdown with list of states from Geonames API
+  const stateDropdown = $('#state-label');
+  getStates().then(states => {
+    states.forEach(state => {
+      const option = $('<option>').val(state.geonameId).text(state.name);
+      stateDropdown.append(option);
+    });
+  });
+
+  // Populating district dropdown based on selected state
+  const districtDropdown = $('#district-label');
+  stateDropdown.on('change', async () => {
+    districtDropdown.empty();
+    const stateGeonameId = stateDropdown.val();
+    const cities = await getCities(stateGeonameId);
+    cities.forEach(district => {
+      const option = $('<option>').val(district.geonameId).text(district.name);
+      districtDropdown.append(option);
+    });
+  });
+
 });

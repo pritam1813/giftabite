@@ -1,7 +1,7 @@
 extends layout.pug
 
 append css
-    link(rel="stylesheet" href="css/joinus.css")  
+    link(rel="stylesheet" href="css/joinus.css" defer)  
 
 block content
     section#joinus-banner 
@@ -35,6 +35,13 @@ block content
                                         input#confirm-password.form-control(name='confirm_password' type='password' placeholder='Confirm Password' required='' data-parsley-trigger='change' data-parsley-required-message='Please confirm your password' data-parsley-equalto-message='Passwords do not match' data-parsley-equalto='#password')
                                     .mb-3
                                         input#phone-number.form-control(name='phoneNumber' type='tel' placeholder='Enter phone number' required='' data-parsley-trigger='change' data-parsley-required-message='Please enter your phone number' data-parsley-pattern-message='Please enter a valid 10 digit phone number without spaces' data-parsley-pattern='^\\d{10}$')
+                                    .mb-3.d-flex.justify-content-between
+                                        .col-6
+                                            select#state-label.grey-font.form-control.form-select(name='state')
+                                                option(selected='' disabled='') Select State
+                                        .col-5
+                                            select#district-label.grey-font.form-control.form-select(name='district')
+                                                option(selected='' disabled='') Select District
                                     .mb-3
                                         select#register-as-label.grey-font.form-control.form-select(name='registerAs' aria-label='Select option for Registration' required='' data-parsley-trigger='change' data-parsley-required-message='Please select an option')
                                             option(selected='' disabled='') Register As
@@ -59,5 +66,5 @@ block content
                                     button.btn.black-button-white-hover.rounded-pill(type='submit') Login
 
 append scripts
-    script(src="https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.9.2/parsley.min.js" integrity="sha512-eyHL1atYNycXNXZMDndxrDhNAegH2BDWt1TmkXJPoGf1WLlNYt08CSjkqF5lnCRmdm3IrkHid8s2jOUY4NIZVQ==" crossorigin="anonymous" referrerpolicy="no-referrer")
+    script(src="https://cdn.jsdelivr.net/npm/parsleyjs@2.9.2/dist/parsley.min.js" crossorigin="anonymous" referrerpolicy="no-referrer")
     script(src="js/joinus.js") 

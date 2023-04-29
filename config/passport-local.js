@@ -29,6 +29,11 @@ passport.use(new LocalStrategy(
                 return done(null, false);
             }
 
+            // Setting the session cookie to a longer expiry time if the "remember-me" field is set
+            if (req.body['remember-me']) {
+                req.session.cookie.maxAge = 30 * 24 * 60 * 60 * 1000; // 30 days in milliseconds
+            }
+
             return done(null, user); // else part i.e. when user is found
 
         } catch (error) {

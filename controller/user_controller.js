@@ -3,7 +3,7 @@ const bcrypt = require('bcrypt');                               //Module to crea
 const validator = require('deep-email-validator');              //Module For Checking Valid Emails
 
 module.exports.joinus = (req, res) => {
-    if(req.isAuthenticated()){                  //isAuthenticated is inbuilt function to check Authentication 
+    if (req.isAuthenticated()) {                  //isAuthenticated is inbuilt function to check Authentication 
         return res.redirect('/dashboard');          //If user is alredy Authenticated then sign up page is not accessible
     }
     return res.render('JoinUs', { title: 'Giftabite | Join Us' });
@@ -12,11 +12,11 @@ module.exports.joinus = (req, res) => {
 //Action for Creating/Signing Up a user and storing the Data in the Database
 module.exports.signup = async function (req, res) {
     try {
-
+        const userEmail = await req.body.email;
+        const validEmail = await validator.validate({ email: userEmail, validateSMTP: false });
         //Checking For Proper valid Emails using deep-email-validator to prevent spam or fake user
-        const validEmail = await validator.validate(req.body.email);
-        if(!validEmail.valid){
-            return res.json({ error: 'Invalid Email or Email Domain Not Allowed', type: 'InvalidEmail' });
+        if (!validEmail.valid) {
+            return res.json({ error: `Email error: ${validEmail.reason}`, type: 'InvalidEmail' });
         }
 
         //If the password and confirm password doesn't match then we will not create user
@@ -49,29 +49,29 @@ module.exports.signup = async function (req, res) {
     }
 };
 
-module.exports.dashboard = async function(req, res){
+module.exports.dashboard = async function (req, res) {
     try {
-        if(!req.isAuthenticated()){
+        if (!req.isAuthenticated()) {
             //If User is not Authenticated then redirect him to Join Us page
             return res.redirect('/join-us');
         }
-        return res.render('Dashboard', {title: 'Dashboard'});
+        return res.render('Dashboard', { title: 'Dashboard' });
     } catch (error) {
         console.log(error);
     }
 }
 
 //Action for Logging in a user and creating a Session
-module.exports.create_session = function(req, res){
+module.exports.create_session = function (req, res) {
 
     return res.redirect('/dashboard');
 };
 
 //Action for signing out a user and destroying the session
-module.exports.destroySession = function(req, res){
-    req.logout(function(err){           //Included function in passport js for destroying session
-        if(err){console.log(err)};
+module.exports.destroySession = function (req, res) {
+    req.logout(function (err) {           //Included function in passport js for destroying session
+        if (err) { console.log(err) };
 
         return res.redirect('/');
-    });               
+    });
 };
