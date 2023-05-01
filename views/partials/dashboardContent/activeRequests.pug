@@ -1,0 +1,19 @@
+.table-responsive
+    table.table
+        thead
+            tr
+                th(scope='col') Requested By
+                th(scope='col') Quantity(Meals)
+                th(scope='col') Status
+                if (user_details.registerAs == 'Volunteer')
+                    th(scope='col') Pickup Address 
+                else 
+                    th(scope='col') Delivery Address
+        tbody.table-group-divider
+            tr
+                td 
+                    =user_details.name
+            tr
+                td Jacob
+            tr
+                td Larry the Bird

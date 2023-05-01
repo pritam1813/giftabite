@@ -1,0 +1,8 @@
+form#createRequests-form.w-50(action='/dashboard/create-requests' method='post' novalidate='')
+    .mb-3
+        input#Quantity.form-control(name='quantity' type='number' placeholder='Quantity' required='')
+        //- data-parsley-trigger='change' data-parsley-required-message='Please enter your full name'
+    .mb-5
+        textarea#Address.form-control(rows='3' name='address' placeholder='Address' required='')
+        //- data-parsley-trigger='change' data-parsley-type-message='Please enter a valid email address' data-parsley-required-message='Please enter your email address'
+    button.btn.black-button-white-hover.rounded-pill#createReq-button(type='submit' ) Submit

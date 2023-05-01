@@ -1,5 +1,6 @@
 // Importing mongoose.js for creating mongoDB schemas
 const mongoose = require('mongoose');
+const Request = require('./request');       //Importing Requets Model
 
 //Creating User Schema
 const userSchema = new mongoose.Schema({
@@ -32,7 +33,12 @@ const userSchema = new mongoose.Schema({
     registerAs: {
         type: String,
         enum: ['NGO', 'Volunteer', 'Restaurant', 'Donor']
-    }
+    },
+        // Array Referencing to Request DB, which contains donation/request details of users
+    requests: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Request'
+    }]
 });
 
 //Telling mongoose it is a mongoDB model

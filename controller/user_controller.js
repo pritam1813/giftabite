@@ -55,7 +55,10 @@ module.exports.dashboard = async function (req, res) {
             //If User is not Authenticated then redirect him to Join Us page
             return res.redirect('/join-us');
         }
-        return res.render('Dashboard', { title: 'Dashboard' });
+        return res.render('Dashboard', { 
+            title: 'Dashboard',
+            user_details: req.user 
+        });
     } catch (error) {
         console.log(error);
     }
