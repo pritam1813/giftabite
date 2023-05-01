@@ -1,4 +1,5 @@
 const User = require('../models/user');                         //Importing user database from models folder
+const Request = require('../models/request');                    //Importing Reequests database from models folder
 const bcrypt = require('bcrypt');                               //Module to create password hash
 const validator = require('deep-email-validator');              //Module For Checking Valid Emails
 
@@ -55,9 +56,16 @@ module.exports.dashboard = async function (req, res) {
             //If User is not Authenticated then redirect him to Join Us page
             return res.redirect('/join-us');
         }
+        let user = await User.findById(req.user.id);
+
+        let requests = await Request.find({})
+        .sort('-createdAt')
+        .populate('requestedBy');
+        
         return res.render('Dashboard', { 
             title: 'Dashboard',
-            user_details: req.user 
+            user_details: user,
+            all_requests: requests
         });
     } catch (error) {
         console.log(error);

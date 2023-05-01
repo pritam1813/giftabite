@@ -21,6 +21,10 @@ const requestSchema = new mongoose.Schema({
     address: {
         type: String,
         required: true
+    },
+    addressType: {
+      type: String,
+      enum: ['pickup', 'delivery']
     }
 },{
     timestamps: true

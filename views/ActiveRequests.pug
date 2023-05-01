@@ -1,0 +1,50 @@
+extends layout.pug
+
+append css
+    link(rel="stylesheet" href="css/activereq.css")  
+
+block content
+    section#activereq-banner 
+        .d-flex#activereq-banner-container
+            .container.d-flex.align-items-center#banner-flex
+                #banner-title-wrap
+                    h1.sub-heading-font.white-font Active Requests
+                        
+    section#activereq-section
+        .container.text-start
+            .row.justify-content-center
+                .table-responsive
+                    table.table
+                        thead
+                            tr
+                                if locals.user
+                                    th(scope="col")
+                                th(scope='col') Requested By
+                                th(scope='col') Quantity(Meals)
+                                th(scope='col') Status
+                                th(scope='col') Pickup Address 
+                                th(scope='col') Delivery Address
+                        tbody.table-group-divider
+                            for request of all_requests
+                                tr
+                                    if locals.user
+                                        td 
+                                            input.form-check-input(type="checkbox")
+                                    td 
+                                        =request.requestedBy.name
+                                    td  
+                                        =request.quantity
+                                    td 
+                                        =request.status
+                                    if (request.addressType == 'pickup')
+                                        td
+                                            =request.address
+                                    else 
+                                        td 
+                                        td
+                                            =request.address
+                .pagination.justify-content-end
+                    button.prev-btn(disabled='') Previous
+                    button.next-btn Next
+append scripts
+    script(src="js/activereq.js") 

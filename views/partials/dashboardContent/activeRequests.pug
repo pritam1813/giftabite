@@ -10,10 +10,13 @@
                 else 
                     th(scope='col') Delivery Address
         tbody.table-group-divider
-            tr
-                td 
-                    =user_details.name
-            tr
-                td Jacob
-            tr
-                td Larry the Bird
+            for request of all_requests
+                tr
+                    td 
+                        =request.requestedBy.name
+                    td  
+                        =request.quantity
+                    td 
+                        =request.status
+                    td
+                        =request.address

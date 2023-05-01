@@ -1,0 +1,312 @@
+@charset "UTF-8";
+body:before {
+  background-color: #fcf8e3;
+  border-bottom: 1px solid #fbeed5;
+  border-left: 1px solid #fbeed5;
+  color: #c09853;
+  font: small-caption;
+  padding: 3px 6px;
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 100;
+}
+@media (min-width: 0em) {
+  body:before {
+    content: "xs ≥ 0px (0em)";
+  }
+}
+@media (min-width: 36em) {
+  body:before {
+    content: "mobile ≥ 576px (36em)";
+  }
+}
+@media (min-width: 48em) {
+  body:before {
+    content: "tablet ≥ 768px (48em)";
+  }
+}
+@media (min-width: 61.9375em) {
+  body:before {
+    content: "desktop ≥ 991px (61.9375em)";
+  }
+}
+@media (min-width: 75em) {
+  body:before {
+    content: "wide ≥ 1200px (75em)";
+  }
+}
+@media (min-width: 87.5em) {
+  body:before {
+    content: "xxl ≥ 1400px (87.5em)";
+  }
+}
+
+/* MAIN COLORS */
+/* HEADER COLORS */
+/*Navbar Colors*/
+/*Homepage Colors*/
+/* Footer Colors */
+/* WIDTH AND HEIGHT */
+/* PADDINGS AND MARGINS */
+/* FONTS */
+#activereq-banner-container {
+  background: url("../images/DashBoardImage.jpg") center/cover no-repeat;
+  width: 100%;
+}
+@media (max-width: 35.99em) {
+  #activereq-banner-container {
+    height: 320px;
+  }
+}
+@media (min-width: 36em) and (max-width: 47.99em) {
+  #activereq-banner-container {
+    height: 400px;
+  }
+}
+@media (min-width: 48em) and (max-width: 61.9275em) {
+  #activereq-banner-container {
+    height: 420px;
+  }
+}
+@media (min-width: 61.9375em) and (max-width: 74.99em) {
+  #activereq-banner-container {
+    height: 450px;
+  }
+}
+@media (min-width: 75em) and (max-width: 87.49em) {
+  #activereq-banner-container {
+    height: 450px;
+  }
+}
+@media (min-width: 87.5em) {
+  #activereq-banner-container {
+    height: 450px;
+  }
+}
+#activereq-banner-container p {
+  font-weight: 400;
+}
+@media (max-width: 35.99em) {
+  #activereq-banner-container p {
+    font-size: 25px;
+  }
+}
+@media (min-width: 36em) and (max-width: 47.99em) {
+  #activereq-banner-container p {
+    font-size: 30px;
+  }
+}
+@media (min-width: 48em) and (max-width: 61.9275em) {
+  #activereq-banner-container p {
+    font-size: 36px;
+  }
+}
+@media (min-width: 61.9375em) and (max-width: 74.99em) {
+  #activereq-banner-container p {
+    font-size: 40px;
+  }
+}
+@media (min-width: 75em) and (max-width: 87.49em) {
+  #activereq-banner-container p {
+    font-size: 40px;
+  }
+}
+@media (min-width: 87.5em) {
+  #activereq-banner-container p {
+    font-size: 40px;
+  }
+}
+@media (max-width: 35.99em) {
+  #activereq-banner-container h1 {
+    font-size: 35px;
+  }
+}
+@media (min-width: 36em) and (max-width: 47.99em) {
+  #activereq-banner-container h1 {
+    font-size: 38px;
+  }
+}
+@media (min-width: 48em) and (max-width: 61.9275em) {
+  #activereq-banner-container h1 {
+    font-size: 50px;
+  }
+}
+@media (min-width: 61.9375em) and (max-width: 74.99em) {
+  #activereq-banner-container h1 {
+    font-size: 65px;
+  }
+}
+@media (min-width: 75em) and (max-width: 87.49em) {
+  #activereq-banner-container h1 {
+    font-size: 80px;
+  }
+}
+@media (min-width: 87.5em) {
+  #activereq-banner-container h1 {
+    font-size: 80px;
+  }
+}
+
+@media (max-width: 35.99em) {
+  #activereq-section {
+    margin: auto;
+  }
+}
+@media (min-width: 36em) and (max-width: 47.99em) {
+  #activereq-section {
+    margin: auto;
+  }
+}
+@media (min-width: 48em) and (max-width: 61.9275em) {
+  #activereq-section {
+    margin: -5% auto auto;
+  }
+}
+@media (min-width: 61.9375em) and (max-width: 74.99em) {
+  #activereq-section {
+    margin: -5% auto auto;
+  }
+}
+@media (min-width: 75em) and (max-width: 87.49em) {
+  #activereq-section {
+    margin: -5% auto auto;
+  }
+}
+@media (min-width: 87.5em) {
+  #activereq-section {
+    margin: -5% auto auto;
+  }
+}
+@media (max-width: 35.99em) {
+  #activereq-section {
+    width: 90%;
+  }
+}
+@media (min-width: 36em) and (max-width: 47.99em) {
+  #activereq-section {
+    width: 90%;
+  }
+}
+@media (min-width: 48em) and (max-width: 61.9275em) {
+  #activereq-section {
+    width: 100%;
+  }
+}
+@media (min-width: 61.9375em) and (max-width: 74.99em) {
+  #activereq-section {
+    width: 100%;
+  }
+}
+@media (min-width: 75em) and (max-width: 87.49em) {
+  #activereq-section {
+    width: 100%;
+  }
+}
+@media (min-width: 87.5em) {
+  #activereq-section {
+    width: 100%;
+  }
+}
+@media (max-width: 35.99em) {
+  #activereq-section {
+    padding: 0;
+  }
+}
+@media (min-width: 36em) and (max-width: 47.99em) {
+  #activereq-section {
+    padding: 0 0 50px;
+  }
+}
+@media (min-width: 48em) and (max-width: 61.9275em) {
+  #activereq-section {
+    padding: 0 0 80px;
+  }
+}
+@media (min-width: 61.9375em) and (max-width: 74.99em) {
+  #activereq-section {
+    padding: 0 0 100px;
+  }
+}
+@media (min-width: 75em) and (max-width: 87.49em) {
+  #activereq-section {
+    padding: 0 0 120px;
+  }
+}
+@media (min-width: 87.5em) {
+  #activereq-section {
+    padding: 0 0 120px;
+  }
+}
+#activereq-section .container {
+  background-color: #f1eeec;
+}
+@media (max-width: 35.99em) {
+  #activereq-section .container {
+    padding: 12% 0;
+  }
+}
+@media (min-width: 36em) and (max-width: 47.99em) {
+  #activereq-section .container {
+    padding: 15% 0;
+  }
+}
+@media (min-width: 48em) and (max-width: 61.9275em) {
+  #activereq-section .container {
+    padding: 10% 0;
+  }
+}
+@media (min-width: 61.9375em) and (max-width: 74.99em) {
+  #activereq-section .container {
+    padding: 5% 0;
+  }
+}
+@media (min-width: 75em) and (max-width: 87.49em) {
+  #activereq-section .container {
+    padding: 5% 0;
+  }
+}
+@media (min-width: 87.5em) {
+  #activereq-section .container {
+    padding: 5% 0;
+  }
+}
+#activereq-section .container .nav-tabs .nav-item {
+  border: none;
+  padding: 0;
+}
+#activereq-section .container .nav-tabs .nav-item .nav-link {
+  border: 0;
+  color: #2e4049;
+}
+#activereq-section .container .nav-tabs .nav-item .nav-link.active {
+  background-color: #77d7d3;
+}
+#activereq-section .container form .btn {
+  border: 2px solid #2e4049;
+}
+#activereq-section .container form .form-check-input {
+  padding: 0;
+}
+#activereq-section .container form input,
+#activereq-section .container form select {
+  padding: 9px 15px;
+  border-radius: 0%;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+#activereq-section .container form input:focus,
+#activereq-section .container form select:focus {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+#activereq-section .container form .form-check-input:checked {
+  background-color: #2e4049;
+  border: none;
+}
+#activereq-section .container form .invalid-feedback {
+  display: none !important;
+}
