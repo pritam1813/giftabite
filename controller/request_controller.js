@@ -8,14 +8,12 @@ module.exports.create_req = async function(req, res){
         if(user){
             //If user found then creating a request
             //setting the addresstype first. Delivery address for request created by NGO, and pickup for others
-            const addressType = user.registerAs === 'NGO' ? 'delivery' : 'pickup';
 
-            let request = await Request.create({
-                requestedBy: req.user,
-                quantity: req.body.quantity,
-                address: req.body.address,
-                addressType: addressType
-            });
+            let addressType = user.registerAs === 'NGO' ? 'delivery' : 'pickup';
+            req.body.addressType = addressType;
+            req.body.requestedBy = req.user;
+            console.log(req.body);
+            let request = await Request.create(req.body);
 
             //Once the request is created then updating the user DB's requests field with this request
             user.requests.push(request);

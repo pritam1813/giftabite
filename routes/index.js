@@ -1,14 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const passport = require('passport');                               //Importing passport module
-const userController = require('../controller/user_controller');
 const requestController = require('../controller/request_controller');
 
 //Registration/Login Route
 router.use('/join-us', require('./users'));
-
-//api call route
-router.use('/api', require('./api/index'));
 
 //Root Route/Homepage
 router.get('/', (req, res) => {

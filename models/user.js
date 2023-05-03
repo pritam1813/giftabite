@@ -24,21 +24,26 @@ const userSchema = new mongoose.Schema({
         unique: true,
         match: /^\d{10}$/
     },
-    state: {
-        type: String
-    },
-    district: {
-        type: String
+    address: {
+        type: {
+            state: String,
+            district: String,
+            townorvillage: String,
+            street: String
+        },
+        id: false
     },
     registerAs: {
         type: String,
         enum: ['NGO', 'Volunteer', 'Restaurant', 'Donor']
     },
-        // Array Referencing to Request DB, which contains donation/request details of users
+    // Array Referencing to Request DB, which contains donation/request details of users
     requests: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Request'
     }]
+},{
+    timestamps: true
 });
 
 //Telling mongoose it is a mongoDB model

@@ -1,0 +1,8 @@
+form#update-form.w-50(action='/dashboard/update' method='post' novalidate='')
+    .mb-3
+        input#Name.form-control(name='name' value=`${user_details.name}` type='text' placeholder='Full Name' required='' data-parsley-trigger='change' data-parsley-required-message='Please enter your full name')
+    .mb-3
+        input#email.form-control(type='email' name='email'  value=`${user_details.email}` placeholder='Email Address' required='' data-parsley-trigger='change' data-parsley-type-message='Please enter a valid email address' data-parsley-required-message='Please enter your email address')
+    .mb-3
+        input#phone-number.form-control(name='phoneNumber' type='tel'  value=`${user_details.phoneNumber}` placeholder='Enter phone number' required='' data-parsley-trigger='change' data-parsley-required-message='Please enter your phone number' data-parsley-pattern-message='Please enter a valid 10 digit phone number without spaces' data-parsley-pattern='^\\d{10}$')
+    button.btn.black-button-white-hover.rounded-pill#signup-button(type='submit' ) Update

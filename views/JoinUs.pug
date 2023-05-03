@@ -35,13 +35,15 @@ block content
                                         input#confirm-password.form-control(name='confirm_password' type='password' placeholder='Confirm Password' required='' data-parsley-trigger='change' data-parsley-required-message='Please confirm your password' data-parsley-equalto-message='Passwords do not match' data-parsley-equalto='#password')
                                     .mb-3
                                         input#phone-number.form-control(name='phoneNumber' type='tel' placeholder='Enter phone number' required='' data-parsley-trigger='change' data-parsley-required-message='Please enter your phone number' data-parsley-pattern-message='Please enter a valid 10 digit phone number without spaces' data-parsley-pattern='^\\d{10}$')
+                                    .mb-3 
+                                        input#Address.form-control(name='address.street' type='text' placeholder='Address (House/Flat No. and Street)')
                                     .mb-3.d-flex.justify-content-between
-                                        .col-6
-                                            select#state-label.grey-font.form-control.form-select(name='state')
-                                                option(selected='' disabled='') Select State
                                         .col-5
-                                            select#district-label.grey-font.form-control.form-select(name='district')
-                                                option(selected='' disabled='') Select District
+                                            input#townOrvillage-label.grey-font.form-control(name='address.townorvillage' placeholder="Town or Village Name")
+                                        .col-6 
+                                            input#district-label.grey-font.form-control(name='address.district' placeholder="District")
+                                    .mb-3 
+                                        input#state-label.grey-font.form-control(name='address.state' placeholder="State")
                                     .mb-3
                                         select#register-as-label.grey-font.form-control.form-select(name='registerAs' aria-label='Select option for Registration' required='' data-parsley-trigger='change' data-parsley-required-message='Please select an option')
                                             option(selected='' disabled='') Register As

@@ -19,8 +19,13 @@ const requestSchema = new mongoose.Schema({
         default: 'Pending'
     },
     address: {
-        type: String,
-        required: true
+        type: {
+            state: String,
+            district: String,
+            townorvillage: String,
+            street: String
+        },
+        _id: false
     },
     addressType: {
       type: String,

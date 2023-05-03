@@ -19,4 +19,10 @@
                     td 
                         =request.status
                     td
-                        =request.address
+                        =request.address.street
+                        |<br/>
+                        =request.address.townorvillage + ', '
+                        |
+                        =request.address.district
+                        |<br/>
+                        =request.address.state

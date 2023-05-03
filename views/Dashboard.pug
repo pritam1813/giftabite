@@ -19,9 +19,7 @@ block content
                         #v-pills-tab.nav.flex-column.nav-pills.me-3(role='tablist' aria-orientation='vertical')
                             button#v-pills-activeReq-tab.nav-link.active(data-bs-toggle='pill' data-bs-target='#v-pills-activeReq' type='button' role='tab' aria-controls='v-pills-activeReq' aria-selected='true') Active Requests
                             button#v-pills-createReq-tab.nav-link(data-bs-toggle='pill' data-bs-target='#v-pills-createReq' type='button' role='tab' aria-controls='v-pills-createReq' aria-selected='false') Create Requests
-                            button#v-pills-disabled-tab.nav-link(data-bs-toggle='pill' data-bs-target='#v-pills-disabled' type='button' role='tab' aria-controls='v-pills-disabled' aria-selected='false') Disabled
-                            button#v-pills-messages-tab.nav-link(data-bs-toggle='pill' data-bs-target='#v-pills-messages' type='button' role='tab' aria-controls='v-pills-messages' aria-selected='false') Messages
-                            button#v-pills-settings-tab.nav-link(data-bs-toggle='pill' data-bs-target='#v-pills-settings' type='button' role='tab' aria-controls='v-pills-settings' aria-selected='false') Settings
+                            button#v-pills-disabled-tab.nav-link(data-bs-toggle='pill' data-bs-target='#v-pills-disabled' type='button' role='tab' aria-controls='v-pills-disabled' aria-selected='false') Profile
                     .d-md-none
                         //-Horizontal nav tabs for small screens
                         ul#v-pills-tab.nav.nav-pills(role='tablist' aria-orientation='horizontal')
@@ -30,19 +28,15 @@ block content
                             li.nav-item
                                 button#v-pills-createReq-tab.nav-link(data-bs-toggle='pill' data-bs-target='#v-pills-createReq' type='button' role='tab' aria-controls='v-pills-createReq' aria-selected='false') Create Requests
                             li.nav-item
-                                button#v-pills-disabled-tab.nav-link(data-bs-toggle='pill' data-bs-target='#v-pills-disabled' type='button' role='tab' aria-controls='v-pills-disabled' aria-selected='false' disabled='') Disabled
-                            li.nav-item
-                                button#v-pills-messages-tab.nav-link(data-bs-toggle='pill' data-bs-target='#v-pills-messages' type='button' role='tab' aria-controls='v-pills-messages' aria-selected='false') Messages
-                            li.nav-item
-                                button#v-pills-settings-tab.nav-link(data-bs-toggle='pill' data-bs-target='#v-pills-settings' type='button' role='tab' aria-controls='v-pills-settings' aria-selected='false') Settings
+                                button#v-pills-disabled-tab.nav-link(data-bs-toggle='pill' data-bs-target='#v-pills-disabled' type='button' role='tab' aria-controls='v-pills-disabled' aria-selected='false') Profile
                 .col-md-9.offset-md-1
                     #v-pills-tabContent.tab-content
                         #v-pills-activeReq.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='v-pills-activeReq-tab' tabindex='0')
                             include partials/dashboardContent/activeRequests.pug
                         #v-pills-createReq.tab-pane.fade(role='tabpanel' aria-labelledby='v-pills-createReq-tab' tabindex='0')
                             include partials/dashboardContent/createRequests
-                        #v-pills-disabled.tab-pane.fade(role='tabpanel' aria-labelledby='v-pills-disabled-tab' tabindex='0') ...
-                        #v-pills-messages.tab-pane.fade(role='tabpanel' aria-labelledby='v-pills-messages-tab' tabindex='0') ...
-                        #v-pills-settings.tab-pane.fade(role='tabpanel' aria-labelledby='v-pills-settings-tab' tabindex='0') ...
+                        #v-pills-disabled.tab-pane.fade(role='tabpanel' aria-labelledby='v-pills-disabled-tab' tabindex='0')
+                            include partials/dashboardContent/userDetails
 append scripts 
+    script(src="https://cdn.jsdelivr.net/npm/parsleyjs@2.9.2/dist/parsley.min.js" crossorigin="anonymous" referrerpolicy="no-referrer")
     script(src="js/dashboard.js") 

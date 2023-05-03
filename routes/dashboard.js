@@ -11,4 +11,7 @@ router.get('/:id', passport.checkAuthentication , userController.dashboard);
 //Create Requests
 router.post('/create-requests', requestController.create_req);
 
+//Update User
+router.put('/update', userController.update);
+
 module.exports = router;

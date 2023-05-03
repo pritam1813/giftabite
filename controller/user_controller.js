@@ -86,3 +86,28 @@ module.exports.destroySession = function (req, res) {
         return res.redirect('/');
     });
 };
+
+//Action for updating User
+module.exports.update = async function(req, res) {
+    try {
+        if (!req.isAuthenticated()) {
+            //If User is not Authenticated then redirect him to Join Us page
+            return res.redirect('/join-us');
+        }
+        let user = await User.findById(req.user.id);
+
+        if(user){
+            user.name = req.body.name;
+            user.email = req.body.email;
+            user.phoneNumber = req.body.phoneNumber;
+
+            await user.save();
+            return res.redirect('back');
+        } else {
+            console.log("User Not Found");
+            return res.redirect('back');
+        }
+    } catch (error) {
+        console.log(error);
+    }
+}
