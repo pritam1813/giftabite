@@ -61,9 +61,11 @@ app.use(passport.session());        /* acts as a middleware to alter the req obj
 app.use(passport.setAuthentication);
 
 //Setting the App to use the routes folder to handle Different Routes
-app.use('/', require('./routes/index'));
-
+app.use('/', require('./routes'));
 
 
 //Command For Running The App
-app.listen(env.port, () => { console.log(`App Running in ${env.name} Mode, On Port: ${env.port}`) });
+const server = app.listen(env.port, () => { console.log(`App Running in ${env.name} Mode, On Port: ${env.port}`) });
+
+
+module.exports = server;

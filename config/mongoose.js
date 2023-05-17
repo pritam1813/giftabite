@@ -7,20 +7,19 @@ const env = require('./environment');
 
 //Defining mongoose to connect to the database
 mongoose.set("strictQuery", false);
-mongoose.connect(env.mongodb_uri, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-});
 
-//Getting the connected DB
-const db = mongoose.connection;
-
-//Handling the error for DB connection
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function () {
+const connectToDatabase = async () => {
+  try {
+    await mongoose.connect(env.mongodb_uri, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true
+    });
     console.log("Connected to MongoDB!");
-});
+  } catch (error) {
+    console.error('Connection error:', error);
+  }
+};
 
+connectToDatabase();
 
-//Exporting
-module.exports = db;
+module.exports = { mongoose, connectToDatabase };

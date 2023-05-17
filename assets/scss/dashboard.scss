@@ -26,18 +26,10 @@
         background-color: $home-color4;
         @include main.responsive-padding(12% 0, 15% 0, 10% 0, 5% 0);
 
-        .nav-tabs{
-            .nav-item{
-                border: none;
-                padding: 0;
-
-                .nav-link{
-                    border: 0;
-                    color: $tertiary-color;
-                }
-                .nav-link.active{
-                    background-color: $primary-color;
-                }
+        button{
+            .nav-link, 
+            .active{
+                background-color: $primary-color;
             }
         }
 

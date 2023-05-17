@@ -1,17 +1,37 @@
 .table-responsive
     table.table
+        -let userType = user_details.registerAs 
+        -let userId = user_details.id
+        mixin userButton(userId, requestUser, requestObj, userType)
+            span 
+                button.btn.dropdown-toggle(type="button" data-bs-toggle="dropdown" aria-expanded="false")
+                ul.dropdown-menu
+                    if(userType == 'Volunteer')
+                        li
+                            a.dropdown-item(href=`dashboard/accept/${requestObj}`) Accept
+                    if(userId == requestUser)
+                        li
+                            a.dropdown-item(href=`dashboard/delete/${requestObj}`) Delete
         thead
             tr
+                th
                 th(scope='col') Requested By
                 th(scope='col') Quantity(Meals)
                 th(scope='col') Status
-                if (user_details.registerAs == 'Volunteer')
-                    th(scope='col') Pickup Address 
-                else 
-                    th(scope='col') Delivery Address
+                th(scope='col') Address
         tbody.table-group-divider
             for request of all_requests
                 tr
+                    -let reqObj =  request.id
+                    -let requestUser = request.requestedBy.id
+    
+                    //-if(userType == 'Volunteer')
+                    td 
+                        if(userId == requestUser && userType != 'Volunteer')
+                            +userButton(userId, requestUser, reqObj, userType)
+                        if(userType == 'Volunteer')
+
+                            +userButton(userId, requestUser, reqObj, userType)
                     td 
                         =request.requestedBy.name
                     td  

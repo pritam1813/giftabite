@@ -12,6 +12,12 @@ router.get('/:id', passport.checkAuthentication , userController.dashboard);
 router.post('/create-requests', requestController.create_req);
 
 //Update User
-router.put('/update', userController.update);
+router.post('/update', passport.checkAuthentication, userController.update);
+
+//Accept Requests
+router.get('/accept/:id', passport.checkAuthentication, requestController.acceptreq);
+
+//Delete Requests
+router.get('/delete/:id', passport.checkAuthentication, requestController.deletereq);
 
 module.exports = router;

@@ -46,3 +46,36 @@ module.exports.activereq = async function(req, res){
         console.log(error);
     }
 }
+
+//Action for accepting a request created by volunteer
+module.exports.acceptreq = async function (req, res){
+    try {
+        if(req.user.registerAs == 'Volunteer'){
+            await Request.findByIdAndUpdate(req.params.id, {status: 'In Progress'});
+            await Request.save();
+            return res.redirect('back');
+        } else {
+            return res.send("You are not allowed to perform this action");
+        }
+    } catch (err) {
+        console.error(err);
+        return res.redirect('back');
+    }
+}
+
+//Action for deleting a request created by user
+module.exports.deletereq = async function(req, res){
+    try {
+        const requestObj = await Request.findById(req.params.id);
+        if(requestObj.requestedBy == req.user.id){
+
+            let userId = requestObj.requestedBy;
+            await requestObj.deleteOne();
+            await User.findByIdAndUpdate(userId, { $pull: { requests: req.params.id } });
+        }
+        return res.redirect('back');
+    } catch (error) {
+        console.error(error);
+        return res.redirect('back');
+    }
+}
