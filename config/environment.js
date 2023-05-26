@@ -5,7 +5,7 @@ const development = {
     name: 'development',
     port: 3000,
     asset_path: 'assets/',
-    mongodb_uri: 'mongodb://127.0.0.1:27017/giftabite',
+    mongodb_uri: process.env.MONGODB_URI,
     session_cookie_key: 'giftabitetestKey',
     geoname_id: '1269750', //Geoname ID For India
     geonames_username: 'giftabitetest'

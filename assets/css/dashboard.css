@@ -227,9 +227,13 @@
     padding: 5% 0;
   }
 }
-#dashboard-section .container button .nav-link,
-#dashboard-section .container button .active {
-  background-color: #77d7d3;
+#dashboard-section .container .nav .nav-link {
+  color: #2e4049;
+}
+#dashboard-section .container .nav .nav-pills,
+#dashboard-section .container .nav .active {
+  background-color: #ff6d6d;
+  color: white;
 }
 #dashboard-section .container form .btn {
   border: 2px solid #2e4049;

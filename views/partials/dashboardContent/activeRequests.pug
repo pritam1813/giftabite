@@ -11,7 +11,7 @@
                             a.dropdown-item(href=`dashboard/accept/${requestObj}`) Accept
                     if(userId == requestUser)
                         li
-                            a.dropdown-item(href=`dashboard/delete/${requestObj}`) Delete
+                            a.dropdown-item(href=`dashboard/delete/${requestObj}`)#deleteReqLink Delete
         thead
             tr
                 th
@@ -21,10 +21,10 @@
                 th(scope='col') Address
         tbody.table-group-divider
             for request of all_requests
-                tr
-                    -let reqObj =  request.id
-                    -let requestUser = request.requestedBy.id
-    
+                -let reqObj =  request.id
+                -let requestUser = request.requestedBy.id
+
+                tr(id=`request-${reqObj}`)
                     //-if(userType == 'Volunteer')
                     td 
                         if(userId == requestUser && userType != 'Volunteer')

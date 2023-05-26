@@ -26,10 +26,14 @@
         background-color: $home-color4;
         @include main.responsive-padding(12% 0, 15% 0, 10% 0, 5% 0);
 
-        button{
-            .nav-link, 
+        .nav{
+            .nav-link{
+                color: $tertiary-color;
+            }
+            .nav-pills, 
             .active{
-                background-color: $primary-color;
+                background-color: $secondary-color;
+                color: white;
             }
         }
 

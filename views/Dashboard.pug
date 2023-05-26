@@ -32,10 +32,12 @@ block content
                 .col-md-9.offset-md-1
                     #v-pills-tabContent.tab-content
                         #v-pills-activeReq.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='v-pills-activeReq-tab' tabindex='0')
+                            .response-message
                             include partials/dashboardContent/activeRequests.pug
                         #v-pills-createReq.tab-pane.fade(role='tabpanel' aria-labelledby='v-pills-createReq-tab' tabindex='0')
                             include partials/dashboardContent/createRequests
                         #v-pills-disabled.tab-pane.fade(role='tabpanel' aria-labelledby='v-pills-disabled-tab' tabindex='0')
+                            .response-message
                             include partials/dashboardContent/userDetails
 append scripts 
     script(src="https://cdn.jsdelivr.net/npm/parsleyjs@2.9.2/dist/parsley.min.js" crossorigin="anonymous" referrerpolicy="no-referrer")

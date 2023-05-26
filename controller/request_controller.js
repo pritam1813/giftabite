@@ -73,6 +73,15 @@ module.exports.deletereq = async function(req, res){
             await requestObj.deleteOne();
             await User.findByIdAndUpdate(userId, { $pull: { requests: req.params.id } });
         }
+
+        if(req.xhr){
+            return res.status(200).json({
+                data: {
+                    reqeust_id: req.params.id
+                },
+                message: 'Request Deleted'
+            });
+        }
         return res.redirect('back');
     } catch (error) {
         console.error(error);
