@@ -6,7 +6,7 @@ nav.navbar.navbar-expand-md.navbar-light#main-navbar(role='banner')
       img.img-fluid(src='images/Logo.png' loading='lazy' alt='Giftabite Logo')
     //- Buttons
     .d-flex.align-items-center.justify-content-between#nav-buttons
-      a.btn.d-md-none.rounded-pill#nav-donate-button(href='/causes') Donate
+      a.btn.d-md-none.rounded-pill#nav-donate-button(href='/join-us') Donate
       button.navbar-toggler.collapsed#nav-toggle-button(type='button' data-bs-toggle='collapse' data-bs-target='#navbar-collapse' aria-controls='navbar-collapse' aria-expanded='false' aria-label='Toggle navigation')
         i.fa-solid.fa-bars
 
@@ -17,21 +17,6 @@ nav.navbar.navbar-expand-md.navbar-light#main-navbar(role='banner')
                 a.nav-link(href='/') Home
             li.nav-item
                 a.nav-link(href='/about-us') About
-            li.nav-item.dropdown
-                a.nav-link.dropdown-toggle(href='#' role='button' data-bs-toggle='dropdown' aria-expanded='false') Pages
-                ul.dropdown-menu(aria-labelledby='navbarDropdown')
-                    li
-                        a.dropdown-item(href='/causes') Causes
-                    li
-                        a.dropdown-item(href='/project') Projects
-                    li
-                        a.dropdown-item(href='/team') Team
-                    li
-                        a.dropdown-item(href='/volunteer') Volunteer
-                    li
-                        a.dropdown-item(href='/faq') FAQ
-                    li
-                        a.dropdown-item(href='/blog') Blog
             li.nav-item
                 a.nav-link(href='/contact-us') Contact
         if locals.user 

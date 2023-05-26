@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const requestController = require('../controller/request_controller');
+const userController = require('../controller/user_controller');
 
 //Registration/Login Route
 router.use('/join-us', require('./users'));
