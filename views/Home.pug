@@ -1,7 +1,7 @@
 extends layout.pug
 //- Stylesheet and fonts for homepage
 append css
-    link(rel="stylesheet" href="css/home.css")  
+    link(rel="stylesheet" href=`${getAssetPath('css/home.css')}`)  
 
 block content
     //- BANNER
@@ -88,7 +88,7 @@ block content
                     .col.mb-4#become-volunteer-content-wrap 
                         p.para-font-style We work toward this mission by supporting large-scale systemic interventions as well as providing essential food support to underserved communities in the form of raw grains and freshly cooked food.
                     .col
-                        img.img-fluid(src="images/Image2.png", alt="volunteer content section Mini image")
+                        img.img-fluid(src=`${getAssetPath('images/Image2.jpg')}`, alt="volunteer content section Mini image")
                     .col#become-volunteer-button
                         a.btn.rounded-pill.mt-4.red-button-green-hover(href='/join-us') Donate Now
 
