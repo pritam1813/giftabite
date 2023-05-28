@@ -3,7 +3,7 @@ nav.navbar.navbar-expand-md.navbar-light#main-navbar(role='banner')
   .container
     //- Logo
     a.navbar-brand.mb-1(href='/')
-      img.img-fluid(src='images/Logo.png' loading='lazy' alt='Giftabite Logo')
+      img.img-fluid(src=`${getAssetPath('images/Logo.png')}` loading='lazy' alt='Giftabite Logo')
     //- Buttons
     .d-flex.align-items-center.justify-content-between#nav-buttons
       a.btn.d-md-none.rounded-pill#nav-donate-button(href='/join-us') Donate

@@ -1,7 +1,7 @@
 extends layout.pug
 
 append css
-    link(rel="stylesheet" href="css/activereq.css")  
+    link(rel="stylesheet" href=`${getAssetPath('css/activereq.css')}`)  
 
 block content
     mixin adr
@@ -60,4 +60,4 @@ block content
                     button.prev-btn(disabled='') Previous
                     button.next-btn Next
 append scripts
-    script(src="js/activereq.js") 
+    script(src=`${getAssetPath('js/activereq.js')}`) 

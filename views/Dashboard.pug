@@ -1,7 +1,7 @@
 extends layout.pug
 
 append css
-    link(rel="stylesheet" href="css/dashboard.css")  
+    link(rel="stylesheet" href=`${getAssetPath('css/dashboard.css')}`)  
 
 block content
     section#dashboard-banner 
@@ -41,4 +41,4 @@ block content
                             include partials/dashboardContent/userDetails
 append scripts 
     script(src="https://cdn.jsdelivr.net/npm/parsleyjs@2.9.2/dist/parsley.min.js" crossorigin="anonymous" referrerpolicy="no-referrer")
-    script(src="js/dashboard.js") 
+    script(src=`${getAssetPath('js/dashboard.js')}`) 

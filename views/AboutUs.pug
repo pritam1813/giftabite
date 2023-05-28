@@ -1,7 +1,7 @@
 extends layout.pug
 
 append css
-    link(rel="stylesheet" href="css/aboutus.css")
+    link(rel="stylesheet" href=`${getAssetPath('css/aboutus.css')}`)
 
 block content
     //-About Us Banner
@@ -72,7 +72,7 @@ block content
                          | them to adopt good practices to reduce food loss and food 
                          | waste in their supply chains and sharing good practices
                     .row#goal-and-image-wrap
-                        img.img-fluid(src="images/Our-mission-image.jpg", alt="Our Mission Image").pt-4.px-0
+                        img.img-fluid(src=`${getAssetPath('images/Our-mission-image.jpg')}`, alt="Our Mission Image").pt-4.px-0
                     .row#goal-quote 
                         .col.text-center
                             h2.sub-heading-font.p-0.m-0 20000+

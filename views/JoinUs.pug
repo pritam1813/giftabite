@@ -1,7 +1,7 @@
 extends layout.pug
 
 append css
-    link(rel="stylesheet" href="css/joinus.css" defer)  
+    link(rel="stylesheet" href=`${getAssetPath('css/joinus.css')}` defer)  
 
 block content
     section#joinus-banner 
@@ -69,4 +69,4 @@ block content
 
 append scripts
     script(src="https://cdn.jsdelivr.net/npm/parsleyjs@2.9.2/dist/parsley.min.js" crossorigin="anonymous" referrerpolicy="no-referrer")
-    script(src="js/joinus.js") 
+    script(src=`${getAssetPath('js/joinus.js')}`) 
