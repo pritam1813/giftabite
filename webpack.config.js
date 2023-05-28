@@ -38,7 +38,7 @@ const options = {
       } else if (file.isAsset) {
         console.log("ImageFILE");
         let nm = file.name;
-        file.name = `images/${nm}`;
+        file.name = `${nm}`;
       }
       return file;
     },
@@ -53,7 +53,7 @@ module.exports = {
     },
     output: {
         path: path.join(__dirname, 'public'),
-        filename: 'js/[name]-[contenthash].min.js',
+        filename: 'js/[name].min.js',
         publicPath: '',
     },
     module: {
@@ -87,7 +87,7 @@ module.exports = {
                     {
                         loader: "responsive-loader",
                         options: {
-                            name: '[name]-[hash]-[width].[ext]',
+                            name: '[name].[ext]',
                             adapter: require('responsive-loader/sharp'),
                             placeholder: true,
                             placeholderSize: 20,
@@ -100,7 +100,7 @@ module.exports = {
                 type: 'javascript/auto',
                 parser: {
                     dataUrlCondition: {
-                        maxSize: 3 * 1024, // Convert images < 3kb to base64 strings
+                        maxSize: 1024, // Convert images < 1kb to base64 strings
                     },
                 },
 
@@ -109,7 +109,7 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: 'css/[name]-[contenthash].min.css',
+            filename: 'css/[name].min.css',
         }),
         new WebpackManifestPlugin(options),
         new CleanWebpackPlugin(),
