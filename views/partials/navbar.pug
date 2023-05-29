@@ -6,7 +6,10 @@ nav.navbar.navbar-expand-md.navbar-light#main-navbar(role='banner')
       img.img-fluid(src=`${getAssetPath('images/Logo.png')}` loading='lazy' alt='Giftabite Logo')
     //- Buttons
     .d-flex.align-items-center.justify-content-between#nav-buttons
-      a.btn.d-md-none.rounded-pill#nav-donate-button(href='/join-us') Donate
+      if locals.user 
+        a.btn.d-md-none.rounded-pill#nav-donate-button(href='/join-us/logout') Logout
+      else
+        a.btn.d-md-none.rounded-pill#nav-donate-button(href='/join-us') Donate
       button.navbar-toggler.collapsed#nav-toggle-button(type='button' data-bs-toggle='collapse' data-bs-target='#navbar-collapse' aria-controls='navbar-collapse' aria-expanded='false' aria-label='Toggle navigation')
         i.fa-solid.fa-bars
 

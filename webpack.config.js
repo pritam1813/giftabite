@@ -45,7 +45,7 @@ module.exports = {
         ...jsEntries,
         joinus: './assets/scss/joinus.scss',
         dashboard: './assets/scss/dashboard.scss',
-        activereq: './assets/scss/activereq.scss'
+        activereq: './assets/scss/activereq.scss',
     },
     output: {
         path: path.join(__dirname, 'public'),

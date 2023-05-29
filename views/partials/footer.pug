@@ -7,20 +7,15 @@ footer
                 
                 p.pt-3.mb-3.footer-para-font Registered as Giftabyte. Under Indian Society Registration Act XXI, 1860 <br/><br/>
                     | All donations are tax-exempted as eligible under section 80G of the Income Tax Act, 1961.
-                .d-flex.justify-content-center.justify-content-xl-start#footer-social-flex
-                    ul.list-group.list-group-horizontal
-                        a(href="https://facebook.com")
-                            li.list-group-item.rounded-circle  
-                                i.fa-brands.fa-facebook
-                        a(href="https://instagram.com")
-                            li.list-group-item.rounded-circle
-                                 i.fa.fa-instagram
-                        a(href="https://twitter.com")
-                            li.list-group-item.rounded-circle
-                                i.fa.fa-twitter 
-                        a(href="https://pinterest.com")        
-                            li.list-group-item.rounded-circle
-                                i.fa.fa-pinterest 
+                #footer-social-flex.d-flex.justify-content-center.justify-content-xl-start
+                    a.rounded-circle(href='https://facebook.com' aria-label='Facebook Link')
+                        i.fab.fa-facebook
+                    a.rounded-circle(href='https://instagram.com' aria-label='Instagram Link')
+                        i.fa.fa-instagram
+                    a.rounded-circle(href='https://twitter.com' aria-label='Twitter Link')
+                        i.fa.fa-twitter
+                    a.rounded-circle(href='https://pinterest.com' aria-label='Pinterest Link')
+                        i.fa.fa-pinterest
                     
             .col-12.col-sm-12.col-lg-9#footer-widget
                 .container 
@@ -58,4 +53,4 @@ footer
     .container-fluid.p-0#copyright-section-wrap
         .d-flex.justify-content-center
             - let currentyear = new Date().getFullYear();
-            h5.m-0 Copyright &#169; Giftabyte | 2022-#{currentyear}
+            .m-0(style="font-size: 1.25rem;") Copyright &#169; Giftabyte | 2022-#{currentyear}
